@@ -16,11 +16,8 @@
         <!-- Glassmorphism -->
         <div class="glass"></div>
         <div class="surglass  flex flex-col justify-center">
-            <div id="particles0-js"></div>
-            <div id="particles1-js"></div>
-            <div id="particles2-js"></div>
-            <div id="particles3-js"></div>
-            <div id="particles4-js"></div>
+            <div id="tsparticles"></div>
+
             <img src="media/curves.svg" alt="" class="curves">
 
             <svg viewbox="0 0 386 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="curves_2 hidden">
@@ -59,20 +56,21 @@
                 <animate attributename="stroke" values="#FF4343;#6764FF;#F3F800;#1AD2DE" dur="20s"
                     repeatcount="indefinite" />
             </svg>
-             <div id="burger" class="modal">
+            <div id="burger" class="modal">
                 <h6>Home</h6>
                 <h6>À propos de moi</h6>
                 <h6>Compétences</h6>
                 <h6>Portfolio</h6>
                 <h6>Contact</h6>
-            </div> 
+            </div>
             <!-- Header fixed -->
 
             <header class="flex flex-row justify-between pl-2 pr-2 items-center">
                 <img src="media/logo.svg" alt="Logo du site, un 'C' englobant un 'D'">
                 <h4 class="flex flex-row items-center"><img src="media/prev.svg" alt=""
                         class="pr-4 prev hidden">Navigation<img src="media/next.svg" alt="" class="pl-4 next"></h4>
-                <a href="#burger" rel="modal:open" data-modal><img src="media/burger.svg" alt="Icône d'un menu burger"></a>
+                <a href="#burger" rel="modal:open" data-modal><img src="media/burger.svg"
+                        alt="Icône d'un menu burger"></a>
 
             </header>
 
@@ -233,13 +231,14 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-particles"></script>
 
-
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
-    <script src="js/app.js"></script>
     <script src="js/app2.js"></script>
+    <script src="js/app3.js"></script>
 </body>
 
 </html>

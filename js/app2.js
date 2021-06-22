@@ -41,26 +41,21 @@
        if (scroll == 0) {
            $('.prev').hide();
            i = 0;
-           for (a = 0; a < 5; a++) {
-               $('#particles' + a + '-js').removeClass('hidden');
-           }
+        $('#tsparticles').removeClass('hidden');
+           
            $('.curves_2').hide();
            $('.curves').show();
            $('.boucle').hide();
 
        }  else if (scroll >= $(window).height() * 1.5 && scroll < $(window).height() * 2.5) {
-           for (a = 0; a < 5; a++) {
-               $('#particles' + a + '-js').addClass('hidden');
-           }
+            $('#tsparticles').addClass('hidden');
            $('.curves_2').show();
            $('.curves').hide();
            i = 2;
            $('.boucle').hide();
            $('.next').show();
        } else if (scroll < $(window).height() * 1.5 && scroll >= $(window).height()) {
-           for (a = 0; a < 5; a++) {
-               $('#particles' + a + '-js').removeClass('hidden');
-           }
+            $('#tsparticles').removeClass('hidden');
            $('.curves_2').hide();
            $('.curves').show();
            $('.prev').show();
@@ -70,9 +65,7 @@
         }
         else if(scroll >= $(window).height() * 2.5 && scroll < $(window).height() * 3.5){
             $('.curves_2').hide();
-            for (a = 0; a < 5; a++) {
-               $('#particles' + a + '-js').addClass('hidden');
-           }
+             $('#tsparticles').addClass('hidden');
            $('.curves').hide();
            $('.boucle').show();
            $('.next').show();
