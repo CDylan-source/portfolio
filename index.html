@@ -56,13 +56,7 @@
                 <animate attributename="stroke" values="#FF4343;#6764FF;#F3F800;#1AD2DE" dur="20s"
                     repeatcount="indefinite" />
             </svg>
-            <div id="burger" class="modal">
-                <h6>Home</h6>
-                <h6>À propos de moi</h6>
-                <h6>Compétences</h6>
-                <h6>Portfolio</h6>
-                <h6>Contact</h6>
-            </div>
+
             <!-- Header fixed -->
 
             <header class="flex flex-row justify-between pl-2 pr-2 items-center">
@@ -71,6 +65,15 @@
                         class="pr-4 prev hidden">Navigation<img src="media/next.svg" alt="" class="pl-4 next"></h4>
                 <a href="#burger" rel="modal:open" data-modal><img src="media/burger.svg"
                         alt="Icône d'un menu burger"></a>
+                <div id="burger" class="modal">
+                    <div>
+                        <h6 class="here">Home</h6>
+                        <h6>À propos de moi</h6>
+                        <h6>Compétences</h6>
+                        <h6>Portfolio</h6>
+                        <h6>Contact</h6>
+                    </div>
+                </div>
 
             </header>
 
@@ -161,34 +164,42 @@
 
     <section class="flex flex-col items-center  page_4  pb-4 justify-evenly">
         <h3 class="pb-2">Portfolio</h3>
-        <div class="flex flex-col items-center">
-            <img src="media/site_1.svg" alt="Présentation de mon premier site en multi écrans">
-            <button>
-                <p><span>Balises HTML et sélecteurs CSS</span><span>Le premier projet !</span></p>
-            </button>
-        </div>
-        <div class="flex flex-col items-center">
-            <img src="media/site_2.svg" alt="Présentation de mon premier site en multi écrans">
-            <button>
-                <p><span>L’accessibilité dans le web</span><span>Intégration d’une maquette</span></p>
-            </button>
-        </div>
+        <a href="#site1" rel="modal:open">
+            <div class="flex flex-col items-center">
+                <img src="media/site_1.svg" alt="Présentation de mon premier site en multi écrans">
+                <button>
+                    <p><span>Balises HTML et sélecteurs CSS</span><span>Le premier projet !</span></p>
+                </button>
+            </div>
+        </a>
+        <a href="#site2" rel="modal:open">
+            <div class="flex flex-col items-center">
+                <img src="media/site_2.svg" alt="Présentation de mon premier site en multi écrans">
+                <button>
+                    <p><span>L’accessibilité dans le web</span><span>Intégration d’une maquette</span></p>
+                </button>
+            </div>
+        </a>
     </section>
 
     <section class="flex flex-col items-center page_5 pb-4 justify-evenly">
         <h3 class="pb-2">Portfolio</h3>
-        <div class="flex flex-col items-center">
-            <img src="media/site_3.svg" alt="Présentation de mon premier site en multi écrans">
-            <button>
-                <p><span>Carte de profil</span><span>Exercice d’intégration</span></p>
-            </button>
-        </div>
-        <div class="flex flex-col items-center">
-            <img src="media/site_4.svg" alt="Présentation de mon premier site en multi écrans">
-            <button>
-                <p><span>Projet Quizzoot</span><span>Mon projet le plus abouti</span></p>
-            </button>
-        </div>
+        <a href="#site3" rel="modal:open">
+            <div class="flex flex-col items-center">
+                <img src="media/site_3.svg" alt="Présentation de mon premier site en multi écrans">
+                <button>
+                    <p><span>Carte de profil</span><span>Exercice d’intégration</span></p>
+                </button>
+            </div>
+        </a>
+        <a href="#site4" rel="modal:open">
+            <div class="flex flex-col items-center">
+                <img src="media/site_4.svg" alt="Présentation de mon premier site en multi écrans">
+                <button>
+                    <p><span>Projet Quizzoot</span><span>Mon projet le plus abouti</span></p>
+                </button>
+            </div>
+        </a>
     </section>
 
     <section class="page_6 pb-4 ">
@@ -228,13 +239,31 @@
         </article>
 
     </section>
+    <div class="modal" id="site1">
+        <div>
+            <h2>Les balises HTML et les sélecteurs CSS</h2>
+            <p>L’objectif, ici, était de créer une page web listant les balises HTML et les sélecteurs CSS, le tout en
+                découvrant le travail en groupe (et en distanciel).</p>
+            <h4>Avril 2021</h4>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>RESPONSIVE</li>
+                <li>PHOTOSHOP</li>
+                <li>ILLUSTRATOR</li>
+            </ul>
+            <button>
+                <p>Visiter le site</p>
+            </button>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-particles"></script>
 
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
     <script src="js/app2.js"></script>

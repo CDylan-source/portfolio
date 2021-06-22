@@ -218,7 +218,7 @@ body .surglass #tsparticles {
   position: fixed;
   width: 95%;
   height: 92%;
-  margin-top: 4%;
+  top: 4%;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
@@ -420,7 +420,6 @@ body .surglass footer img {
 .page_5 button,
 .page_6 p,
 .page_6 button {
-  width: 90%;
   letter-spacing: 0.05em;
   font-size: 1rem;
   font-family: marianne;
@@ -462,7 +461,7 @@ body .surglass footer img {
 .page_4 div,
 .page_5 div,
 .page_6 div {
-  width: 90%;
+  width: 90vw;
 }
 
 .page_2 div img,
@@ -607,7 +606,7 @@ body .surglass footer img {
 }
 
 .curve {
-  stroke-width: 3px;
+  stroke-width: 2px;
   stroke-opacity: 0;
 }
 
@@ -688,7 +687,151 @@ body .surglass footer img {
 
 #burger {
   height: 40%;
+  position: fixed;
+  vertical-align: unset;
+  top: 14%;
+  right: 5%;
+  text-align: center;
+  border-radius: 30px;
+  background: -webkit-gradient(linear, left top, right top, from(#F5576C), to(#F093FB));
+  background: linear-gradient(90deg, #F5576C 0%, #F093FB 100%);
+  letter-spacing: 0.15em;
+  font-family: marianne;
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+#burger div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1rem;
+  border-radius: 30px;
+}
+
+#burger div h6 {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#burger div .here {
+  color: white;
+}
+
+#site1 {
+  text-align: center;
+  border-radius: 30px;
+  font-family: marianne;
+  width: 95vw;
+  height: 70vh;
+  position: fixed;
+  right: 2.5vw;
+  top: 15vh;
+  background: no-repeat center center fixed url(../media/background.png);
+  background-size: cover;
+  padding: 0;
+}
+
+#site1 h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+#site1 p {
+  font-weight: 400;
+}
+
+#site1 h4 {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+#site1 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#site1 ul li {
+  padding: 0.5rem;
+  border-radius: 30px;
+  background-color: #000A16;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#site1 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 34px -34px 34px rgba(149, 149, 149, 0.3), inset -34px 34px 34px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 34px -34px 34px rgba(149, 149, 149, 0.3), inset -34px 34px 34px rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(60.52px);
+          backdrop-filter: blur(60.52px);
+  padding: 1rem;
+  border-radius: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#site1 p,
+#site1 button {
+  letter-spacing: 0.05em;
+  font-size: 1rem;
+  font-family: marianne;
+  font-weight: 400;
+}
+
+#site1 button {
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#F5576C), to(#F093FB));
+  background: linear-gradient(90deg, #F5576C 0%, #F093FB 100%);
+  border-radius: 50px;
+}
+
+#site1 button p {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(245, 87, 108, 0.06)), to(rgba(240, 147, 251, 0.06)));
+  background: linear-gradient(90deg, rgba(245, 87, 108, 0.06) 0%, rgba(240, 147, 251, 0.06) 100%);
+  -webkit-box-shadow: inset 7.63333px -7.63333px 7.63333px rgba(184, 89, 136, 0.06), inset -7.63333px 7.63333px 7.63333px rgba(255, 255, 255, 0.06);
+          box-shadow: inset 7.63333px -7.63333px 7.63333px rgba(184, 89, 136, 0.06), inset -7.63333px 7.63333px 7.63333px rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(19.5413px);
+          backdrop-filter: blur(19.5413px);
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 @media (max-width: 330px) {

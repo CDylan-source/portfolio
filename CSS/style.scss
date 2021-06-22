@@ -192,9 +192,11 @@ html {
     scroll-behavior: smooth;
 
 }
-button:focus{
-    outline:none;
+
+button:focus {
+    outline: none;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -236,7 +238,7 @@ body {
             position: fixed;
             width: 95%;
             height: 92%;
-            margin-top:4%;
+            top:4%;
             background-image: url("");
             background-repeat: no-repeat;
             background-size: cover;
@@ -244,7 +246,7 @@ body {
             z-index: -1;
         }
 
-        
+
 
         .curves_2 {
             position: fixed;
@@ -430,7 +432,7 @@ body {
 
     p,
     button {
-        width: 90%;
+        
         letter-spacing: 0.05em;
         font-size: 1rem;
         font-family: marianne;
@@ -460,7 +462,7 @@ body {
 
 
     div {
-        width: 90%;
+        width: 90vw;
 
         img {
             height: 25vh;
@@ -477,7 +479,7 @@ body {
     }
 
     article {
-        padding-left:10%;
+        padding-left: 10%;
 
         img {
             height: 3rem;
@@ -579,7 +581,7 @@ $curveCount: 6;
 
 .boucle {
     display: none;
-    top:-10vh;
+    top: -10vh;
     position: fixed;
     z-index: -1;
     width: 95vw;
@@ -588,7 +590,7 @@ $curveCount: 6;
 
 
 .curve {
-    stroke-width: 3px;
+    stroke-width: 2px;
     stroke-opacity: 0;
 
     path {
@@ -623,12 +625,125 @@ $curveCount: 6;
     }
 }
 
-#burger{
-    height : 40%;
-    width:100%;
-    
-}
+#burger {
+    height: 40%;
+    position: fixed;
+    vertical-align: unset;
+    top: 14%;
+    right: 5%;
+    text-align: center;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #F5576C 0%, #F093FB 100%);
+    letter-spacing: 0.15em;
+    font-family: marianne;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding:0;
 
+    div {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: space-around;
+        
+        padding:1rem;
+        border-radius:30px;
+
+        h6 {
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .here {
+            color: white;
+        }
+    }
+
+
+}
+#site1{
+    text-align: center;
+    border-radius: 30px;
+    font-family: marianne;
+    width:95vw;
+    height: 70vh;
+    position: fixed;
+    right:2.5vw;
+    top:15vh;
+    background: no-repeat center center fixed url(../media/background.png);
+    background-size: cover;
+    padding:0;
+    h2{
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    p{
+        font-weight: 400;
+    }
+    h4{
+        font-weight: 300;
+        font-size: 1.25rem;
+    }
+    ul{
+        display:flex;
+        flex-direction:row ;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        li{
+            padding: 0.5rem;
+            border-radius:30px;
+            background-color: #000A16;
+            color:white;
+            font-weight: 300;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+    div{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width:100%;
+        height:100%;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: inset 34px -34px 34px rgba(149, 149, 149, 0.3),
+        inset -34px 34px 34px rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(60.52px);
+        padding:1rem;
+        border-radius:30px;
+        align-items:center;
+    }
+    p,
+    button {
+
+        letter-spacing: 0.05em;
+        font-size: 1rem;
+        font-family: marianne;
+        font-weight: 400;
+    }
+
+    button {
+        color: white;
+        background: linear-gradient(90deg, #F5576C 0%, #F093FB 100%);
+        border-radius: 50px;
+       
+    }
+
+    button p {
+        background: linear-gradient(90deg, rgba(245, 87, 108, 0.06) 0%, rgba(240, 147, 251, 0.06) 100%);
+        box-shadow: inset 7.63333px -7.63333px 7.63333px rgba(184, 89, 136, 0.06),
+            inset -7.63333px 7.63333px 7.63333px rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(19.5413px);
+        border-radius: 50px;
+        width: 100%;
+        height: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+}
 
 @media (max-width : 330px) {
 
@@ -645,10 +760,12 @@ $curveCount: 6;
             display: none;
         }
     }
-    .page_6{
-        article{
-            padding-left:1%;
-            h5{
+
+    .page_6 {
+        article {
+            padding-left: 1%;
+
+            h5 {
                 font-size: 0.8rem;
             }
         }

@@ -1,3 +1,11 @@
+var value = 20;
+if(window.matchMedia("(min-width : 768px)").matches){
+  value = 40;
+}
+else{
+  value = 15;
+}
+
 $("#tsparticles")
   .particles()
   .init(
@@ -33,17 +41,17 @@ $("#tsparticles")
     },
     "number": {
       "density": {
-        "enable": true
+        "enable": false,
       },
-      "value": 20
+      "value": value
     },
     "opacity": {
       "random": {
-        "enable": false
+        "enable": true
       },
       "value": {
         "min": 0.1,
-        "max": 0.2
+        "max": 0.5
       },
       "animation": {
         "speed": 1,
