@@ -7,9 +7,9 @@
 
        var height = $(window).height();
 
-       if (i < 3) {
+       if (i < 5) {
            i++;
-           $(window).scrollTop(height * i);
+           $(window).scrollTop((height * i) + 1);
        }
 
       
@@ -27,14 +27,7 @@
            $(window).scrollTop(height * i)
        }
 
-       if (i == 1) {
-
-           for (a = 0; a < 5; a++) {
-               $('#particles' + a + '-js').removeClass('hidden');
-           }
-           $('.curves_2').hide();
-           $('.curves').show();
-       }
+      
 
 
    });
@@ -55,10 +48,7 @@
            $('.curves').show();
            $('.boucle').hide();
 
-       } else if (scroll == $(document).height() - $(window).height()) {
-           $('.next').hide();
-           i = 3;
-       } else if (scroll >= $(window).height() * 1.5 && scroll < $(window).height() * 2.5) {
+       }  else if (scroll >= $(window).height() * 1.5 && scroll < $(window).height() * 2.5) {
            for (a = 0; a < 5; a++) {
                $('#particles' + a + '-js').addClass('hidden');
            }
@@ -66,7 +56,7 @@
            $('.curves').hide();
            i = 2;
            $('.boucle').hide();
-           
+           $('.next').show();
        } else if (scroll < $(window).height() * 1.5 && scroll >= $(window).height()) {
            for (a = 0; a < 5; a++) {
                $('#particles' + a + '-js').removeClass('hidden');
@@ -85,13 +75,22 @@
            }
            $('.curves').hide();
            $('.boucle').show();
+           $('.next').show();
+           i = 3;
+           
         }
-       
-       
-       
+        else if(scroll >= $(window).height() * 3.5 && scroll < $(window).height() * 4.5){
+       $('.next').show();
+       i = 4;
+       }
+       else if (scroll >= $(window).height() * 4.5 && scroll < $(window).height() * 5.5){
+           i = 5;
+           $('.next').hide();
+       }
    });
 
    $('.figma').bind('click', function () {
+       
        $('.figma_p').removeClass('p-left-out');
        $('.dev_p').removeClass('p-bottom-in');
        $('.access_p').removeClass('p-right-in');
@@ -100,9 +99,17 @@
        setTimeout(() => {
            $('.dev_p').hide();
            $('.access_p').hide();
-           $('.figma_p').show();
+           
+           if(window.matchMedia("(min-width : 330px)").matches){
+               $('.figma_p').show();
+           }
+           else{
+               $('.page_3 div p:nth-child(4)').show();
+               $('.page_3 div p:nth-child(5)').show();
+           };
            $('.figma_p').addClass('p-left-in');
        }, 1000);
+       
    });
 
    $('.dev').bind('click', function () {
@@ -115,7 +122,14 @@
        setTimeout(() => {
            $('.figma_p').hide();
            $('.access_p').hide();
-           $('.dev_p').show();
+           
+           if(window.matchMedia("(min-width : 330px)").matches){
+               $('.dev_p').show();
+           }
+           else{
+               $('.page_3 div p:nth-child(1)').show();
+               $('.page_3 div p:nth-child(2)').show();
+           };
            $('.dev_p').addClass('p-bottom-in');
        }, 1000);
    });
@@ -134,3 +148,5 @@
            $('.access_p').addClass('p-right-in');
        }, 1000);
    });
+
+ 

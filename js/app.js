@@ -1,9 +1,10 @@
 particlesJS("particles0-js", {
+    
     "particles": {
         "number": {
-            "value": 5,
+            "value": 3,
             "density": {
-                "enable": true,
+                "enable": false,
                 "value_area": 800
             }
         },
@@ -12,10 +13,9 @@ particlesJS("particles0-js", {
         },
         "shape": {
             "type": "circle",
-            "stroke": {
-                "width": 2,
-                "color": "#ff0000"
-            },
+            "stroke": [
+                {"width": 2, "color": '#ff0000'},{"width" : 2, "color" : "#F9FC66"}
+            ],
             "polygon": {
                 "nb_sides": 5
             },
@@ -106,15 +106,15 @@ particlesJS("particles0-js", {
             }
         }
     },
-    "retina_detect": true
+    "retina_detect": false
 });
 
 particlesJS("particles1-js", {
     "particles": {
         "number": {
-            "value": 5,
+            "value": 3,
             "density": {
-                "enable": true,
+                "enable": false,
                 "value_area": 800
             }
         },
@@ -217,13 +217,13 @@ particlesJS("particles1-js", {
             }
         }
     },
-    "retina_detect": true
+    "retina_detect": false
 });
 
 particlesJS("particles2-js", {
     "particles": {
         "number": {
-            "value": 5,
+            "value": 3,
             "density": {
                 "enable": true,
                 "value_area": 800
@@ -328,16 +328,16 @@ particlesJS("particles2-js", {
             }
         }
     },
-    "retina_detect": true
+    "retina_detect": false
 });
 
 
 particlesJS("particles3-js", {
     "particles": {
         "number": {
-            "value": 5,
+            "value": 3,
             "density": {
-                "enable": true,
+                "enable": false,
                 "value_area": 800
             }
         },
@@ -440,16 +440,16 @@ particlesJS("particles3-js", {
             }
         }
     },
-    "retina_detect": true
+    "retina_detect": false
 });
 
 
 particlesJS("particles4-js", {
     "particles": {
         "number": {
-            "value": 5,
+            "value": 3,
             "density": {
-                "enable": true,
+                "enable": false,
                 "value_area": 800
             }
         },
@@ -552,6 +552,7 @@ particlesJS("particles4-js", {
             }
         }
     },
-    "retina_detect": true
-});
+    "retina_detect": false
+})
+;
 

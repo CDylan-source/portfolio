@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Chapuis Dylan</title>
@@ -59,14 +59,21 @@
                 <animate attributename="stroke" values="#FF4343;#6764FF;#F3F800;#1AD2DE" dur="20s"
                     repeatcount="indefinite" />
             </svg>
-
+             <div id="burger" class="modal">
+                <h6>Home</h6>
+                <h6>À propos de moi</h6>
+                <h6>Compétences</h6>
+                <h6>Portfolio</h6>
+                <h6>Contact</h6>
+            </div> 
             <!-- Header fixed -->
 
             <header class="flex flex-row justify-between pl-2 pr-2 items-center">
                 <img src="media/logo.svg" alt="Logo du site, un 'C' englobant un 'D'">
                 <h4 class="flex flex-row items-center"><img src="media/prev.svg" alt=""
                         class="pr-4 prev hidden">Navigation<img src="media/next.svg" alt="" class="pl-4 next"></h4>
-                <img src="media/burger.svg" alt="Icône d'un menu burger">
+                <a href="#burger" rel="modal:open" data-modal><img src="media/burger.svg" alt="Icône d'un menu burger"></a>
+
             </header>
 
             <!-- Main  qui va changer au scroll -->
@@ -163,11 +170,65 @@
             </button>
         </div>
         <div class="flex flex-col items-center">
-            <img src="media/site_1.svg" alt="Présentation de mon premier site en multi écrans">
+            <img src="media/site_2.svg" alt="Présentation de mon premier site en multi écrans">
             <button>
-                <p><span>Balises HTML et sélecteurs CSS</span><span>Le premier projet !</span></p>
+                <p><span>L’accessibilité dans le web</span><span>Intégration d’une maquette</span></p>
             </button>
         </div>
+    </section>
+
+    <section class="flex flex-col items-center page_5 pb-4 justify-evenly">
+        <h3 class="pb-2">Portfolio</h3>
+        <div class="flex flex-col items-center">
+            <img src="media/site_3.svg" alt="Présentation de mon premier site en multi écrans">
+            <button>
+                <p><span>Carte de profil</span><span>Exercice d’intégration</span></p>
+            </button>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="media/site_4.svg" alt="Présentation de mon premier site en multi écrans">
+            <button>
+                <p><span>Projet Quizzoot</span><span>Mon projet le plus abouti</span></p>
+            </button>
+        </div>
+    </section>
+
+    <section class="page_6 pb-4 ">
+        <h3>Contact</h3>
+        <article class="flex flex-row">
+            <img src="media/house.svg" alt="Logo d'une maison" class="mr-4">
+            <ul>
+                <li>
+                    <h4>ADRESSE</h4>
+                </li>
+                <li>
+                    <h5>1 bis rue des Perrières 70100 Gray</h5>
+                </li>
+            </ul>
+        </article>
+        <article class="flex flex-row">
+            <img src="media/tel.svg" alt="Logo d'une maison" class="mr-4">
+            <ul>
+                <li>
+                    <h4>TÉLÉPHONE</h4>
+                </li>
+                <li>
+                    <h5>06 33 63 06 10</h5>
+                </li>
+            </ul>
+        </article>
+        <article class="flex flex-row">
+            <img src="media/mail.svg" alt="Logo d'une maison" class="mr-4">
+            <ul>
+                <li>
+                    <h4>E-MAIL</h4>
+                </li>
+                <li>
+                    <h5>chapuis.dylan18@gmail.com</h5>
+                </li>
+            </ul>
+        </article>
+
     </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
@@ -175,6 +236,7 @@
 
 
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
     <script src="js/app.js"></script>
     <script src="js/app2.js"></script>

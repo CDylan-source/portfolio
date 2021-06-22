@@ -188,11 +188,13 @@
     }
 }
 
-html{
+html {
     scroll-behavior: smooth;
-    
-}
 
+}
+button:focus{
+    outline:none;
+}
 body {
     margin: 0;
     padding: 0;
@@ -200,12 +202,12 @@ body {
     background: no-repeat center center fixed url(../media/background.png);
     background-size: cover;
     color: #000A16;
-    
+
 
     .global {
-        
+
         height: 100vh;
-        
+
     }
 
     .glass {
@@ -223,12 +225,13 @@ body {
         overflow: hidden;
     }
 
-    .surglass{
+    .surglass {
         height: 92%;
         width: 95%;
         border-radius: 30px;
-        
-            
+        margin-left: 2.5vw;
+
+
         #particles0-js {
             position: fixed;
             width: 100%;
@@ -237,7 +240,7 @@ body {
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 50% 50%;
-            z-index:-1;
+            z-index: -1;
         }
 
         #particles1-js {
@@ -288,7 +291,7 @@ body {
             position: fixed;
             z-index: -1;
             width: 95vw;
-            left:2.5vw;
+            left: 2.5vw;
             top: 14%;
 
             .path_1 {
@@ -348,7 +351,7 @@ body {
             z-index: 1;
             width: 95vw;
             top: 3vh;
-            left:2.5vw;
+            left: 2.5vw;
 
             h4 {
                 font-size: 1.125rem;
@@ -394,13 +397,13 @@ body {
                 height: 37%;
             }
 
-        
 
-          
 
-          
 
-            
+
+
+
+
         }
 
         footer {
@@ -409,7 +412,7 @@ body {
             bottom: 0;
             width: 95vw;
             bottom: 4vh;
-            left:2.5vw;
+            left: 2.5vw;
 
             h3 {
                 font-family: marianne;
@@ -425,14 +428,18 @@ body {
 }
 
 .page_2,
-.page_3, .page_4 {
+.page_3,
+.page_4,
+.page_5,
+.page_6 {
 
-    height:100vh;
-    width:95vw;
-    padding-bottom:12.5vh;
-    padding-top:12.5vh;
-     overflow-x: hidden;
-    margin-left:2.5vw;
+    height: 100vh;
+    width: 95vw;
+    padding-bottom: 12.5vh;
+    padding-top: 12.5vh;
+    overflow-x: hidden;
+    margin-left: 2.5vw;
+    overflow: hidden;
 
     h1,
     h3 {
@@ -449,7 +456,18 @@ body {
         font-size: 300;
     }
 
+    h4 {
+        letter-spacing: 0.05em;
+        font-family: marianne;
+        font-weight: 500;
+        font-size: 1.125rem;
+    }
 
+    h5 {
+        font-size: 1rem;
+        font-family: marianne;
+        font-size: 300;
+    }
 
     p,
     button {
@@ -464,7 +482,7 @@ body {
         color: white;
         background: linear-gradient(90deg, #F5576C 0%, #F093FB 100%);
         border-radius: 50px;
-        width: 65%;
+        width: auto;
     }
 
     button p {
@@ -475,13 +493,43 @@ body {
         border-radius: 50px;
         width: 100%;
         height: 100%;
-        padding-left:1rem;
-        padding-right:1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
 
+
+
+    div {
+        width: 90%;
+
+        img {
+            height: 25vh;
+        }
+
+        button {
+            width: auto;
+        }
+
+        button p {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    article {
+        padding-left:10%;
+
+        img {
+            height: 3rem;
+        }
+    }
+
+}
+
+.page_3 {
     li {
-        
+
         img {
             height: 10vh;
         }
@@ -508,22 +556,36 @@ body {
     li:nth-of-type(3) {
         color: #6764FF;
     }
+}
 
-    div{
-        width:90%;
+.page_6 {
+    display: grid;
+    grid-template-rows: 1fr 17vh 17vh 17vh 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
 
-        img{
-            width : 65%;
-        }
-        button{
-            width:100%;
-        }
-        button p{
-            display : flex;
-            flex-direction:column;
-        }
+        "titre"
+        "article1"
+        "article2"
+        "article3"
+        "end";
+    align-items: space-evenly;
+
+    article:nth-child(1) {
+        grid-area: article1;
     }
 
+    article:nth-child(2) {
+        grid-area: article2;
+    }
+
+    article:nth-child(3) {
+        grid-area: article3;
+    }
+
+    h3 {
+        text-align: center;
+    }
 }
 
 .p-right-out {
@@ -536,17 +598,17 @@ body {
     animation: slide-in-left 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-.p-right-in{
+.p-right-in {
     -webkit-animation: slide-in-right 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: slide-in-right 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-.p-left-out{
+.p-left-out {
     -webkit-animation: slide-out-left 1.5s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
     animation: slide-out-left 1.5s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
 }
 
-.p-bottom-in{
+.p-bottom-in {
     -webkit-animation: slide-in-bottom 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: slide-in-bottom 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
@@ -555,16 +617,15 @@ $curveCount: 6;
 
 
 
-    
-    .boucle {
-        display:none;
-        margin: 0 auto;
-        margin-left:2.5vw;
-        position:fixed;
-        z-index: 0;
-        width:95vw;
-        height : 50vh;
-    }
+
+.boucle {
+    display: none;
+    top:-10vh;
+    position: fixed;
+    z-index: -1;
+    width: 95vw;
+    height: 50vh;
+}
 
 
 .curve {
@@ -603,15 +664,34 @@ $curveCount: 6;
     }
 }
 
+#burger{
+    height : 40%;
+    width:100%;
+    
+}
 
 
-
-@media (max-width : 300px) {
+@media (max-width : 330px) {
 
     .page_3,
     .page_2 {
         p:nth-of-type(3) {
             display: none;
+        }
+    }
+
+    .page_4,
+    .page_5 {
+        button p span:nth-child(2) {
+            display: none;
+        }
+    }
+    .page_6{
+        article{
+            padding-left:1%;
+            h5{
+                font-size: 0.8rem;
+            }
         }
     }
 }

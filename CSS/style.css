@@ -174,6 +174,10 @@ html {
   scroll-behavior: smooth;
 }
 
+button:focus {
+  outline: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -207,6 +211,7 @@ body .surglass {
   height: 92%;
   width: 95%;
   border-radius: 30px;
+  margin-left: 2.5vw;
 }
 
 body .surglass #particles0-js {
@@ -387,20 +392,29 @@ body .surglass footer img {
 }
 
 .page_2,
-.page_3, .page_4 {
+.page_3,
+.page_4,
+.page_5,
+.page_6 {
   height: 100vh;
   width: 95vw;
   padding-bottom: 12.5vh;
   padding-top: 12.5vh;
   overflow-x: hidden;
   margin-left: 2.5vw;
+  overflow: hidden;
 }
 
 .page_2 h1,
 .page_2 h3,
 .page_3 h1,
-.page_3 h3, .page_4 h1,
-.page_4 h3 {
+.page_3 h3,
+.page_4 h1,
+.page_4 h3,
+.page_5 h1,
+.page_5 h3,
+.page_6 h1,
+.page_6 h3 {
   letter-spacing: 0.15em;
   font-family: marianne;
   font-weight: 500;
@@ -408,9 +422,33 @@ body .surglass footer img {
 }
 
 .page_2 h2,
-.page_3 h2, .page_4 h2 {
+.page_3 h2,
+.page_4 h2,
+.page_5 h2,
+.page_6 h2 {
   letter-spacing: 0.05em;
   font-size: 1.125rem;
+  font-family: marianne;
+  font-size: 300;
+}
+
+.page_2 h4,
+.page_3 h4,
+.page_4 h4,
+.page_5 h4,
+.page_6 h4 {
+  letter-spacing: 0.05em;
+  font-family: marianne;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.page_2 h5,
+.page_3 h5,
+.page_4 h5,
+.page_5 h5,
+.page_6 h5 {
+  font-size: 1rem;
   font-family: marianne;
   font-size: 300;
 }
@@ -418,8 +456,13 @@ body .surglass footer img {
 .page_2 p,
 .page_2 button,
 .page_3 p,
-.page_3 button, .page_4 p,
-.page_4 button {
+.page_3 button,
+.page_4 p,
+.page_4 button,
+.page_5 p,
+.page_5 button,
+.page_6 p,
+.page_6 button {
   width: 90%;
   letter-spacing: 0.05em;
   font-size: 1rem;
@@ -428,16 +471,22 @@ body .surglass footer img {
 }
 
 .page_2 button,
-.page_3 button, .page_4 button {
+.page_3 button,
+.page_4 button,
+.page_5 button,
+.page_6 button {
   color: white;
   background: -webkit-gradient(linear, left top, right top, from(#F5576C), to(#F093FB));
   background: linear-gradient(90deg, #F5576C 0%, #F093FB 100%);
   border-radius: 50px;
-  width: 65%;
+  width: auto;
 }
 
 .page_2 button p,
-.page_3 button p, .page_4 button p {
+.page_3 button p,
+.page_4 button p,
+.page_5 button p,
+.page_6 button p {
   background: -webkit-gradient(linear, left top, right top, from(rgba(245, 87, 108, 0.06)), to(rgba(240, 147, 251, 0.06)));
   background: linear-gradient(90deg, rgba(245, 87, 108, 0.06) 0%, rgba(240, 147, 251, 0.06) 100%);
   -webkit-box-shadow: inset 7.63333px -7.63333px 7.63333px rgba(184, 89, 136, 0.06), inset -7.63333px 7.63333px 7.63333px rgba(255, 255, 255, 0.06);
@@ -451,55 +500,35 @@ body .surglass footer img {
   padding-right: 1rem;
 }
 
-.page_2 li img,
-.page_3 li img, .page_4 li img {
-  height: 10vh;
-}
-
-.page_2 li h4,
-.page_3 li h4, .page_4 li h4 {
-  font-size: 1.125rem;
-  font-family: marianne;
-  font-weight: 300;
-}
-
-.page_2 li .activ,
-.page_3 li .activ, .page_4 li .activ {
-  font-weight: 500;
-}
-
-.page_2 li:nth-of-type(1),
-.page_3 li:nth-of-type(1), .page_4 li:nth-of-type(1) {
-  color: #F3F800;
-}
-
-.page_2 li:nth-of-type(2),
-.page_3 li:nth-of-type(2), .page_4 li:nth-of-type(2) {
-  color: #FF4343;
-}
-
-.page_2 li:nth-of-type(3),
-.page_3 li:nth-of-type(3), .page_4 li:nth-of-type(3) {
-  color: #6764FF;
-}
-
 .page_2 div,
-.page_3 div, .page_4 div {
+.page_3 div,
+.page_4 div,
+.page_5 div,
+.page_6 div {
   width: 90%;
 }
 
 .page_2 div img,
-.page_3 div img, .page_4 div img {
-  width: 65%;
+.page_3 div img,
+.page_4 div img,
+.page_5 div img,
+.page_6 div img {
+  height: 25vh;
 }
 
 .page_2 div button,
-.page_3 div button, .page_4 div button {
-  width: 100%;
+.page_3 div button,
+.page_4 div button,
+.page_5 div button,
+.page_6 div button {
+  width: auto;
 }
 
 .page_2 div button p,
-.page_3 div button p, .page_4 div button p {
+.page_3 div button p,
+.page_4 div button p,
+.page_5 div button p,
+.page_6 div button p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -507,6 +536,83 @@ body .surglass footer img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.page_2 article,
+.page_3 article,
+.page_4 article,
+.page_5 article,
+.page_6 article {
+  padding-left: 10%;
+}
+
+.page_2 article img,
+.page_3 article img,
+.page_4 article img,
+.page_5 article img,
+.page_6 article img {
+  height: 3rem;
+}
+
+.page_3 li img {
+  height: 10vh;
+}
+
+.page_3 li h4 {
+  font-size: 1.125rem;
+  font-family: marianne;
+  font-weight: 300;
+}
+
+.page_3 li .activ {
+  font-weight: 500;
+}
+
+.page_3 li:nth-of-type(1) {
+  color: #F3F800;
+}
+
+.page_3 li:nth-of-type(2) {
+  color: #FF4343;
+}
+
+.page_3 li:nth-of-type(3) {
+  color: #6764FF;
+}
+
+.page_6 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 17vh 17vh 17vh 1fr;
+      grid-template-rows: 1fr 17vh 17vh 17vh 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "titre" "article1" "article2" "article3" "end";
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+}
+
+.page_6 article:nth-child(1) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: article1;
+}
+
+.page_6 article:nth-child(2) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: article2;
+}
+
+.page_6 article:nth-child(3) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: article3;
+}
+
+.page_6 h3 {
+  text-align: center;
 }
 
 .p-right-out {
@@ -536,10 +642,9 @@ body .surglass footer img {
 
 .boucle {
   display: none;
-  margin: 0 auto;
-  margin-left: 2.5vw;
+  top: -10vh;
   position: fixed;
-  z-index: 0;
+  z-index: -1;
   width: 95vw;
   height: 50vh;
 }
@@ -624,10 +729,25 @@ body .surglass footer img {
   }
 }
 
-@media (max-width: 300px) {
+#burger {
+  height: 40%;
+  width: 100%;
+}
+
+@media (max-width: 330px) {
   .page_3 p:nth-of-type(3),
   .page_2 p:nth-of-type(3) {
     display: none;
+  }
+  .page_4 button p span:nth-child(2),
+  .page_5 button p span:nth-child(2) {
+    display: none;
+  }
+  .page_6 article {
+    padding-left: 1%;
+  }
+  .page_6 article h5 {
+    font-size: 0.8rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
