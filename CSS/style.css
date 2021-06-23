@@ -331,8 +331,8 @@ body .surglass main h2 {
 body .surglass main .profil {
   position: absolute;
   top: 31.5%;
-  height: 37%;
-  left: calc(50vw - 22vh);
+  height: 37vh;
+  left: calc(50vw - 15vh);
 }
 
 body .surglass footer {
@@ -861,6 +861,10 @@ body .surglass footer img {
   padding-right: 1rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.logo, header li, footer img, .page_3 img {
+  cursor: pointer;
 }
 
 @media (max-width: 330px) {
