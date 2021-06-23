@@ -16,6 +16,12 @@
     font-weight: 300;
 }
 
+@font-face {
+    font-family: marianne;
+    src: url(../media/Marianne-LightItalic.otf);
+    font-weight: lighter;
+}
+
 
 
 @-webkit-keyframes fade-in {
@@ -324,6 +330,15 @@ body {
                     height: 1.25rem;
                 }
             }
+            ul{
+                li{
+                    letter-spacing: 0.15em;
+                    font-family: marianne;
+                    font-weight: 500;
+                    font-size: 1.5rem;
+                    
+                }
+            }
         }
 
 
@@ -356,6 +371,7 @@ body {
                 position: absolute;
                 top: 31.5%;
                 height: 37%;
+                left:(50vw - 22vh)
             }
 
 
@@ -654,12 +670,13 @@ $curveCount: 6;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
 
-        .here {
-            color: white;
-        }
+        
     }
 
 
+}
+.here {
+    color: white;
 }
 
 #site1,
@@ -800,7 +817,7 @@ $curveCount: 6;
 
     .page_2 {
         padding-bottom: 0;
-        padding-top: 10vh;
+        
     }
 
     .page_3 {
@@ -832,6 +849,13 @@ $curveCount: 6;
         padding-top: 0;
     }
 
+    .here{
+        background:linear-gradient(90deg, #F5576C 0%, #F093FB 100%);
+        font-size: 72px;
+       
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
     body {
         .surglass {
             .curves_2 {
@@ -839,5 +863,82 @@ $curveCount: 6;
             }
         }
     }
+
+}
+
+@media(min-width : 1024px){
+    main{
+        
+        img{
+            position:absolute;
+            height:50vh;
+            top:25vh;
+            left:calc(100vw - 60vh);
+            overflow:hidden
+        }
+        p span:nth-child(1){
+            font-weight: lighter;
+        }
+    }
+    body{
+        
+        .surglass{
+        main{
+             h1{
+            font-size:3rem;
+        }
+        h2{
+            font-size:2rem;
+        }
+        }
+    }
+
+    .page_3{
+        div{
+            width:70vw;
+            
+        }
+    }
+    .page_2 {
+
+        width: 70vw;
+        padding-top:15vh;
+
+
+
+    }
+   
+}
+
+
+.page_6 {
+    display: grid;
+    grid-template-rows: 1fr 17vh 17vh  1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+
+        "titre titre"
+        "article1 article2"
+        "article3 article3"
+        
+        "end";
+    align-items: space-evenly;
+
+    article:nth-child(1) {
+        grid-area: article1;
+    }
+
+    article:nth-child(2) {
+        grid-area: article2;
+    }
+
+    article:nth-child(3) {
+        grid-area: article3;
+    }
+
+    h3 {
+        text-align: center;
+    }
+}
 
 }

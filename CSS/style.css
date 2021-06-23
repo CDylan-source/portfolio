@@ -16,6 +16,12 @@
   font-weight: 300;
 }
 
+@font-face {
+  font-family: marianne;
+  src: url(../media/Marianne-LightItalic.otf);
+  font-weight: lighter;
+}
+
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0.3;
@@ -302,6 +308,13 @@ body .surglass header h4 img {
   height: 1.25rem;
 }
 
+body .surglass header ul li {
+  letter-spacing: 0.15em;
+  font-family: marianne;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
 body .surglass .curves {
   position: fixed;
   z-index: -1;
@@ -327,6 +340,7 @@ body .surglass main .profil {
   position: absolute;
   top: 31.5%;
   height: 37%;
+  left: 30vw;
 }
 
 body .surglass footer {
@@ -722,7 +736,7 @@ body .surglass footer img {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#burger div .here {
+.here {
   color: white;
 }
 
@@ -928,8 +942,37 @@ body .surglass footer img {
   .page_5 {
     padding-top: 0;
   }
+  .here {
+    background: -webkit-gradient(linear, left top, right top, from(#F5576C), to(#F093FB));
+    background: linear-gradient(90deg, #F5576C 0%, #F093FB 100%);
+    font-size: 72px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   body .surglass .curves_2 {
     top: 45vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  main img {
+    position: absolute;
+    height: 50vh;
+    top: 25vh;
+    left: calc(100vw - 60vh);
+    overflow: hidden;
+  }
+  main p span:nth-child(1) {
+    font-weight: lighter;
+  }
+  body .surglass main h1 {
+    font-size: 3rem;
+  }
+  body .surglass main h2 {
+    font-size: 2rem;
+  }
+  body .page_3 div {
+    width: 70vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

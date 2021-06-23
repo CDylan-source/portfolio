@@ -63,7 +63,7 @@
                    $('#burger h6:nth-child(' + a + ')').removeClass('here')
                };
                $('#burger h6:nth-child(3)').addClass('here');
-           } else if (scroll < $(window).height() * 1.5 && scroll >= $(window).height()) {
+           } else if (scroll < $(window).height() * 1.5 && scroll >= $(window).height() * 0.5) {
                $('#tsparticles').removeClass('hidden');
                $('.curves_2').hide();
                $('.curves').show();
@@ -111,11 +111,14 @@
                $('.curves').show();
                $('.boucle').hide();
                for (a = 1; a <= 5; a++) {
-                   $('#burger h6:nth-child(' + a + ')').removeClass('here')
+                   $('#burger h6:nth-child(' + a + ')').removeClass('here');
+                   $('header ul li:nth-child(' + a + ')').removeClass('here');
                };
                $('#burger h6:nth-child(1)').addClass('here');
+               $('header ul li:nth-child(1)').addClass('here');
 
-           } else if (scroll < $(window).height() * 1.5 && scroll >= $(window).height()) {
+
+           } else if (scroll < $(window).height() * 1.5 && scroll >= $(window).height() * 0.5) {
                $('#tsparticles').addClass('hidden');
                $('.curves_2').show();
                $('.curves').hide();
@@ -124,9 +127,11 @@
                i = 1;
                $('.boucle').hide();
                for (a = 1; a <= 5; a++) {
-                   $('#burger h6:nth-child(' + a + ')').removeClass('here')
+                   $('#burger h6:nth-child(' + a + ')').removeClass('here');
+                   $('header ul li:nth-child(' + a + ')').removeClass('here');
                };
                $('#burger h6:nth-child(2)').addClass('here');
+               $('header ul li:nth-child(2)').addClass('here');
 
            } else if (scroll >= $(window).height() * 1.5 && scroll < $(window).height() * 2.5) {
                $('#tsparticles').addClass('hidden');
@@ -136,9 +141,11 @@
                $('.boucle').show();
                $('.next').show();
                for (a = 1; a <= 5; a++) {
-                   $('#burger h6:nth-child(' + a + ')').removeClass('here')
+                   $('#burger h6:nth-child(' + a + ')').removeClass('here');
+                   $('header ul li:nth-child(' + a + ')').removeClass('here');
                };
                $('#burger h6:nth-child(4)').addClass('here');
+               $('header ul li:nth-child(3)').addClass('here');
 
            } else if (scroll >= $(window).height() * 2.5 && scroll < $(window).height() * 3.5) {
                $('.curves_2').hide();
@@ -148,9 +155,11 @@
                $('.next').hide();
                i = 3;
                for (a = 1; a <= 5; a++) {
-                   $('#burger h6:nth-child(' + a + ')').removeClass('here')
+                   $('#burger h6:nth-child(' + a + ')').removeClass('here');
+                   $('header ul li:nth-child(' + a + ')').removeClass('here');
                };
                $('#burger h6:nth-child(5)').addClass('here');
+               $('header ul li:nth-child(4)').addClass('here');
 
            }
        }
@@ -243,4 +252,25 @@
 
    $('.logo').bind('click', function () {
        $(window).scrollTop(0);
+   });
+
+   
+       $('header ul li:nth-child(1)').bind('click', function(){
+        $(window).scrollTop($(window).height(0));
+       
+   });
+
+   $('header ul li:nth-child(2)').bind('click', function(){
+        $(window).scrollTop($(window).height());
+       
+   });
+
+   $('header ul li:nth-child(3)').bind('click', function(){
+        $(window).scrollTop($(window).height() * 2);
+       
+   });
+
+   $('header ul li:nth-child(4)').bind('click', function(){
+        $(window).scrollTop($(window).height() * 3);
+       
    });

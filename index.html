@@ -61,10 +61,16 @@
 
             <header class="flex flex-row justify-between pl-2 pr-2 items-center">
                 <img src="media/logo.svg" alt="Logo du site, un 'C' englobant un 'D'" class="logo">
-                <h4 class="flex flex-row items-center"><img src="media/prev.svg" alt=""
+                <h4 class="flex flex-row items-center lg:hidden"><img src="media/prev.svg" alt=""
                         class="pr-4 prev hidden">Navigation<img src="media/next.svg" alt="" class="pl-4 next"></h4>
-                <a href="#burger" rel="modal:open" data-modal><img src="media/burger.svg"
+                <a href="#burger" rel="modal:open" class="lg:hidden" data-modal><img src="media/burger.svg"
                         alt="Icône d'un menu burger"></a>
+                <ul class="lg:flex flex-row w-3/4 justify-around hidden">
+                    <li class="here">Home</li>
+                    <li>À propos de moi</li>
+                    <li>Portfolio</li>
+                    <li>Contact</li>
+                </ul>
                 <div id="burger" class="modal">
                     <div>
                         <h6 class="here">Home</h6>
@@ -79,18 +85,23 @@
 
             <!-- Main  qui va changer au scroll -->
             <main class="h-3/4 pb-4">
-                <section class="flex flex-col items-center h-full page_1 ">
-                    <h1 class="pb-2 pt-4">CHAPUIS DYLAN</h1>
-                    <h2>DÉVELOPPEUR WEB JUNIOR</h2>
+                <section class="flex flex-col  h-full page_1 ">
+                    <h1 class="pb-2 pt-4 text-center">CHAPUIS DYLAN</h1>
+                    <h2 class="text-center">DÉVELOPPEUR WEB JUNIOR</h2>
                     <img src="media/profile.svg" alt="Photo de moi-même entourée d'un rond jaune avec une ombre portée"
-                        class="profil">
+                        class="profil lg:hidden">
+                    <img src="media/profile_desktop.svg"
+                        alt="Photo de moi-même entourée d'un rond jaune avec une ombre portée" class="hidden lg:block ">
+                    <p class="hidden xl:flex w-1/4 pl-8 ml-24 text-xl text-right mt-auto flex-col"><span>Je suis pauvre et n’ai que mes rêves.
+                        Sous tes pas je les ai déroulés.
+                        Marche doucement car tu marches sur mes rêves.</span><span>Equilibrium</span></p>
                 </section>
 
 
             </main>
 
             <!-- Footer contact -->
-            <footer class="flex flex-row justify-between items-center p-2">
+            <footer class="flex flex-row justify-between lg:justify-evenly items-center p-2">
                 <a href="https://github.com/CDylan-source" target="_blank" rel="noopener noreferrer"><img
                         src="media/github.svg" alt="Logo de github"></a>
                 <a href="https://www.linkedin.com/in/chapuis-dylan-373679210/" target="_blank"
@@ -100,17 +111,17 @@
         </div>
     </div>
     <section class="flex flex-col items-center page_2 justify-between sm:justify-start">
-        <h3 class="pb-2 sm:pb-8">À propos de moi</h3>
-        <p class="sm:pb-4">Depuis toujours passionné par l’informatique et les nouvelles technologies, j’ai rejoint la
+        <h3 class="pb-2 sm:pb-4 lg:hidden">À propos de moi</h3>
+        <p class="sm:pb-4 xl:w-3/4 lg:mt-8">Depuis toujours passionné par l’informatique et les nouvelles technologies, j’ai rejoint la
             formation
             de développeur web au sein de l’Access Code School en avril 2021.</p>
-        <p class="sm:pb-4">Ça a été pour moi une réelle révélation, le plaisir de transformer l’abstrait en concret, le
+        <p class="sm:pb-4 xl:w-3/4">Ça a été pour moi une réelle révélation, le plaisir de transformer l’abstrait en concret, le
             code en
             page web, m’a rappelé ma première passion, les mathématiques.</p>
-        <p class="sm:pb-4">Je n’ai maintenant qu’une hâte, confirmer cette expérience dans le monde professionnel.</p>
-        <button class="flex flex-row justify-center">
+        <p class="sm:pb-4 xl:w-3/4">Je n’ai maintenant qu’une hâte, confirmer cette expérience dans le monde professionnel.</p>
+        <a href="media/chapuis_dylan_cv.pdf" target="_blank" rel="noopener noreferrer"><button class="flex flex-row justify-center">
             <p class="p-2">Télécharger mon CV</p>
-        </button>
+        </button></a>
 
     </section>
 
@@ -130,7 +141,7 @@
                 <h4>Accessibilité</h4>
             </li>
         </ul>
-        <div class="flex flex-col items-center justify-evenly h-3/4">
+        <div class="flex flex-col items-center justify-evenly h-3/4 lg:items-start">
             <p class="dev_p">J’ai pu, au sein de cette formation à l’ACS, apprendre à manipuler différents langages
                 associés
                 au
@@ -168,7 +179,7 @@
     </section>
 
     <section class="flex flex-col items-center  page_4  pb-4 justify-evenly">
-        <h3 class="pb-2">Portfolio</h3>
+        <h3 class="pb-2 lg:hidden">Portfolio</h3>
         <a href="#site1" rel="modal:open">
             <div class="flex flex-col items-center">
                 <img src="media/site_1.svg" alt="Présentation de mon premier site en multi écrans">
@@ -188,7 +199,7 @@
     </section>
 
     <section class="flex flex-col items-center page_5 pb-4 justify-evenly">
-        <h3 class="pb-2">Portfolio</h3>
+        <h3 class="pb-2 lg:hidden">Portfolio</h3>
         <a href="#site3" rel="modal:open">
             <div class="flex flex-col items-center">
                 <img src="media/site_3.svg" alt="Présentation de mon premier site en multi écrans">
@@ -208,7 +219,7 @@
     </section>
 
     <section class="page_6 pb-4 ">
-        <h3>Contact</h3>
+        <h3 class="lg:hidden">Contact</h3>
         <article class="flex flex-row">
             <img src="media/house.svg" alt="Logo d'une maison" class="mr-4">
             <ul>
@@ -318,8 +329,8 @@
                 <li>RESPONSIVE</li>
             </ul>
             <a href="https://dylanc.promo-66.codeur.online/quizzoot/" target="_blank" rel="noopener noreferrer"><button>
-                <p>Visiter le site</p>
-            </button></a>
+                    <p>Visiter le site</p>
+                </button></a>
         </div>
     </div>
 
