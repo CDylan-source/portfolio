@@ -1,25 +1,25 @@
 @font-face {
     font-family: marianne;
     src: url(../media/Marianne-Regular.otf);
-    font-weight: 400;
+    
 }
 
 @font-face {
-    font-family: marianne;
+    font-family: marianne-med;
     src: url(../media/Marianne-Medium.otf);
-    font-weight: 500;
+    
 }
 
 @font-face {
-    font-family: marianne;
+    font-family: marianne-thin;
     src: url(../media/Marianne-Thin.otf);
-    font-weight: 300;
+    
 }
 
 @font-face {
-    font-family: marianne;
+    font-family: marianne-ita;
     src: url(../media/Marianne-LightItalic.otf);
-    font-weight: lighter;
+    
 }
 
 
@@ -323,7 +323,7 @@ body {
             h4 {
                 font-size: 1.125rem;
                 font-family: marianne;
-                font-weight: 400;
+                
 
 
                 img {
@@ -333,8 +333,8 @@ body {
             ul{
                 li{
                     letter-spacing: 0.15em;
-                    font-family: marianne;
-                    font-weight: 500;
+                    font-family: marianne-med;
+                    
                     font-size: 1.5rem;
                     
                 }
@@ -355,23 +355,23 @@ body {
 
             h1 {
                 letter-spacing: 0.15em;
-                font-family: marianne;
-                font-weight: 500;
+                font-family: marianne-med;
+                
                 font-size: 1.5rem;
             }
 
             h2 {
                 letter-spacing: 0.05em;
                 font-size: 1.125rem;
-                font-family: marianne;
-                font-size: 300;
+                font-family: marianne-thin;
+                
             }
 
             .profil {
                 position: absolute;
                 top: 31.5%;
                 height: 37%;
-                left:(50vw - 22vh)
+                left:calc(50vw - 22vh);
             }
 
 
@@ -392,8 +392,8 @@ body {
             left: 2.5vw;
 
             h3 {
-                font-family: marianne;
-                font-weight: 500;
+                font-family: marianne-med;
+               
                 font-size: 1.125rem;
             }
 
@@ -421,29 +421,29 @@ body {
     h1,
     h3 {
         letter-spacing: 0.15em;
-        font-family: marianne;
-        font-weight: 500;
+        font-family: marianne-med;
+       
         font-size: 1.5rem;
     }
 
     h2 {
         letter-spacing: 0.05em;
         font-size: 1.125rem;
-        font-family: marianne;
-        font-size: 300;
+        font-family: marianne-thin;
+       
     }
 
     h4 {
         letter-spacing: 0.05em;
-        font-family: marianne;
-        font-weight: 500;
+        font-family: marianne-med;
+        
         font-size: 1.125rem;
     }
 
     h5 {
         font-size: 1rem;
-        font-family: marianne;
-        font-size: 300;
+        font-family: marianne-thin;
+        
     }
 
     p,
@@ -452,7 +452,7 @@ body {
         letter-spacing: 0.05em;
         font-size: 1rem;
         font-family: marianne;
-        font-weight: 400;
+        
     }
 
     button {
@@ -513,12 +513,12 @@ body {
 
         h4 {
             font-size: 1.125rem;
-            font-family: marianne;
-            font-weight: 300;
+            font-family: marianne-thin;
+            
         }
 
         .activ {
-            font-weight: 500;
+            font-family: marianne-med;
         }
     }
 
@@ -546,17 +546,17 @@ body {
         "article2"
         "article3"
         "end";
-    align-items: space-evenly;
+    
 
-    article:nth-child(1) {
+    article:nth-child(2) {
         grid-area: article1;
     }
 
-    article:nth-child(2) {
+    article:nth-child(3) {
         grid-area: article2;
     }
 
-    article:nth-child(3) {
+    article:nth-child(4) {
         grid-area: article3;
     }
 
@@ -651,8 +651,8 @@ $curveCount: 6;
     border-radius: 30px;
     background: linear-gradient(90deg, #F5576C 0%, #F093FB 100%);
     letter-spacing: 0.15em;
-    font-family: marianne;
-    font-weight: 500;
+    font-family: marianne-med;
+    
     font-size: 1.5rem;
     padding: 0;
 
@@ -696,16 +696,16 @@ $curveCount: 6;
     padding: 0;
 
     h2 {
-        font-weight: 500;
+        font-family: marianne-med;
         font-size: 1.5rem;
     }
 
     p {
-        font-weight: 400;
+        font-family: marianne;
     }
 
     h4 {
-        font-weight: 300;
+        font-family: marianne-thin;
         font-size: 1.25rem;
     }
 
@@ -720,7 +720,7 @@ $curveCount: 6;
             border-radius: 30px;
             background-color: #000A16;
             color: white;
-            font-weight: 300;
+            font-family: marianne-thin;
             font-size: 1rem;
             margin-bottom: 1rem;
             margin-left: 0.5rem;
@@ -749,7 +749,7 @@ $curveCount: 6;
         letter-spacing: 0.05em;
         font-size: 1rem;
         font-family: marianne;
-        font-weight: 400;
+        
     }
 
     button {
@@ -877,7 +877,7 @@ $curveCount: 6;
             overflow:hidden
         }
         p span:nth-child(1){
-            font-weight: lighter;
+            font-family: marianne-ita;
         }
     }
     body{
@@ -900,45 +900,46 @@ $curveCount: 6;
         }
     }
     .page_2 {
-
+        p{
         width: 70vw;
-        padding-top:15vh;
-
-
-
-    }
-   
+}
+button p{
+    width:auto;
 }
 
 
-.page_6 {
-    display: grid;
-    grid-template-rows: 1fr 17vh 17vh  1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-
-        "titre titre"
-        "article1 article2"
-        "article3 article3"
-        
-        "end";
-    align-items: space-evenly;
-
-    article:nth-child(1) {
-        grid-area: article1;
     }
 
-    article:nth-child(2) {
-        grid-area: article2;
-    }
-
-    article:nth-child(3) {
-        grid-area: article3;
-    }
-
-    h3 {
-        text-align: center;
-    }
 }
 
-}
+
+   .page_6 {
+       grid-template-rows: 1fr 17vh 17vh 1fr;
+       grid-template-columns: 1fr 1fr;
+       grid-template-areas:
+
+           "titre titre"
+           "article1 article2"
+           "article3 article3"
+
+           "end end";
+
+
+       article:nth-child(2) {
+           grid-area: article1;
+           justify-self:center;
+       }
+
+       article:nth-child(3) {
+           grid-area: article2;
+           justify-self:center;
+       }
+
+       article:nth-child(4) {
+           grid-area: article3;
+           justify-self:center;
+       }
+
+
+
+}}

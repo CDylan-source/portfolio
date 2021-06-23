@@ -1,25 +1,21 @@
 @font-face {
   font-family: marianne;
   src: url(../media/Marianne-Regular.otf);
-  font-weight: 400;
 }
 
 @font-face {
-  font-family: marianne;
+  font-family: marianne-med;
   src: url(../media/Marianne-Medium.otf);
-  font-weight: 500;
 }
 
 @font-face {
-  font-family: marianne;
+  font-family: marianne-thin;
   src: url(../media/Marianne-Thin.otf);
-  font-weight: 300;
 }
 
 @font-face {
-  font-family: marianne;
+  font-family: marianne-ita;
   src: url(../media/Marianne-LightItalic.otf);
-  font-weight: lighter;
 }
 
 @-webkit-keyframes fade-in {
@@ -301,7 +297,6 @@ body .surglass header {
 body .surglass header h4 {
   font-size: 1.125rem;
   font-family: marianne;
-  font-weight: 400;
 }
 
 body .surglass header h4 img {
@@ -310,8 +305,7 @@ body .surglass header h4 img {
 
 body .surglass header ul li {
   letter-spacing: 0.15em;
-  font-family: marianne;
-  font-weight: 500;
+  font-family: marianne-med;
   font-size: 1.5rem;
 }
 
@@ -324,23 +318,21 @@ body .surglass .curves {
 
 body .surglass main h1 {
   letter-spacing: 0.15em;
-  font-family: marianne;
-  font-weight: 500;
+  font-family: marianne-med;
   font-size: 1.5rem;
 }
 
 body .surglass main h2 {
   letter-spacing: 0.05em;
   font-size: 1.125rem;
-  font-family: marianne;
-  font-size: 300;
+  font-family: marianne-thin;
 }
 
 body .surglass main .profil {
   position: absolute;
   top: 31.5%;
   height: 37%;
-  left: 30vw;
+  left: calc(50vw - 22vh);
 }
 
 body .surglass footer {
@@ -353,8 +345,7 @@ body .surglass footer {
 }
 
 body .surglass footer h3 {
-  font-family: marianne;
-  font-weight: 500;
+  font-family: marianne-med;
   font-size: 1.125rem;
 }
 
@@ -387,8 +378,7 @@ body .surglass footer img {
 .page_6 h1,
 .page_6 h3 {
   letter-spacing: 0.15em;
-  font-family: marianne;
-  font-weight: 500;
+  font-family: marianne-med;
   font-size: 1.5rem;
 }
 
@@ -399,8 +389,7 @@ body .surglass footer img {
 .page_6 h2 {
   letter-spacing: 0.05em;
   font-size: 1.125rem;
-  font-family: marianne;
-  font-size: 300;
+  font-family: marianne-thin;
 }
 
 .page_2 h4,
@@ -409,8 +398,7 @@ body .surglass footer img {
 .page_5 h4,
 .page_6 h4 {
   letter-spacing: 0.05em;
-  font-family: marianne;
-  font-weight: 500;
+  font-family: marianne-med;
   font-size: 1.125rem;
 }
 
@@ -420,8 +408,7 @@ body .surglass footer img {
 .page_5 h5,
 .page_6 h5 {
   font-size: 1rem;
-  font-family: marianne;
-  font-size: 300;
+  font-family: marianne-thin;
 }
 
 .page_2 p,
@@ -437,7 +424,6 @@ body .surglass footer img {
   letter-spacing: 0.05em;
   font-size: 1rem;
   font-family: marianne;
-  font-weight: 400;
 }
 
 .page_2 button,
@@ -530,12 +516,11 @@ body .surglass footer img {
 
 .page_3 li h4 {
   font-size: 1.125rem;
-  font-family: marianne;
-  font-weight: 300;
+  font-family: marianne-thin;
 }
 
 .page_3 li .activ {
-  font-weight: 500;
+  font-family: marianne-med;
 }
 
 .page_3 li:nth-of-type(1) {
@@ -558,24 +543,21 @@ body .surglass footer img {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
       grid-template-areas: "titre" "article1" "article2" "article3" "end";
-  -webkit-box-align: space-evenly;
-      -ms-flex-align: space-evenly;
-          align-items: space-evenly;
 }
 
-.page_6 article:nth-child(1) {
+.page_6 article:nth-child(2) {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: article1;
 }
 
-.page_6 article:nth-child(2) {
+.page_6 article:nth-child(3) {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: article2;
 }
 
-.page_6 article:nth-child(3) {
+.page_6 article:nth-child(4) {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: article3;
@@ -710,8 +692,7 @@ body .surglass footer img {
   background: -webkit-gradient(linear, left top, right top, from(#F5576C), to(#F093FB));
   background: linear-gradient(90deg, #F5576C 0%, #F093FB 100%);
   letter-spacing: 0.15em;
-  font-family: marianne;
-  font-weight: 500;
+  font-family: marianne-med;
   font-size: 1.5rem;
   padding: 0;
 }
@@ -761,7 +742,7 @@ body .surglass footer img {
 #site2 h2,
 #site3 h2,
 #site4 h2 {
-  font-weight: 500;
+  font-family: marianne-med;
   font-size: 1.5rem;
 }
 
@@ -769,14 +750,14 @@ body .surglass footer img {
 #site2 p,
 #site3 p,
 #site4 p {
-  font-weight: 400;
+  font-family: marianne;
 }
 
 #site1 h4,
 #site2 h4,
 #site3 h4,
 #site4 h4 {
-  font-weight: 300;
+  font-family: marianne-thin;
   font-size: 1.25rem;
 }
 
@@ -806,7 +787,7 @@ body .surglass footer img {
   border-radius: 30px;
   background-color: #000A16;
   color: white;
-  font-weight: 300;
+  font-family: marianne-thin;
   font-size: 1rem;
   margin-bottom: 1rem;
   margin-left: 0.5rem;
@@ -851,7 +832,6 @@ body .surglass footer img {
   letter-spacing: 0.05em;
   font-size: 1rem;
   font-family: marianne;
-  font-weight: 400;
 }
 
 #site1 button,
@@ -913,7 +893,6 @@ body .surglass footer img {
   }
   .page_2 {
     padding-bottom: 0;
-    padding-top: 10vh;
   }
   .page_3 {
     padding-top: 0;
@@ -963,7 +942,7 @@ body .surglass footer img {
     overflow: hidden;
   }
   main p span:nth-child(1) {
-    font-weight: lighter;
+    font-family: marianne-ita;
   }
   body .surglass main h1 {
     font-size: 3rem;
@@ -973,6 +952,41 @@ body .surglass footer img {
   }
   body .page_3 div {
     width: 70vw;
+  }
+  body .page_2 p {
+    width: 70vw;
+  }
+  body .page_2 button p {
+    width: auto;
+  }
+  .page_6 {
+    -ms-grid-rows: 1fr 17vh 17vh 1fr;
+        grid-template-rows: 1fr 17vh 17vh 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "titre titre" "article1 article2" "article3 article3"  "end end";
+  }
+  .page_6 article:nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: article1;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .page_6 article:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: article2;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .page_6 article:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: article3;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

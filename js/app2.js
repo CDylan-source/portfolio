@@ -38,7 +38,7 @@
 
    $(window).scroll(function () {
        var scroll = $(window).scrollTop();
-       if (window.matchMedia('max-width:640px').matches) {
+       if (window.matchMedia('(max-width:640px)').matches) {
            if (scroll == 0) {
                $('.prev').hide();
                i = 0;
