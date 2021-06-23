@@ -60,7 +60,7 @@
             <!-- Header fixed -->
 
             <header class="flex flex-row justify-between pl-2 pr-2 items-center">
-                <img src="media/logo.svg" alt="Logo du site, un 'C' englobant un 'D'">
+                <img src="media/logo.svg" alt="Logo du site, un 'C' englobant un 'D'" class="logo">
                 <h4 class="flex flex-row items-center"><img src="media/prev.svg" alt=""
                         class="pr-4 prev hidden">Navigation<img src="media/next.svg" alt="" class="pl-4 next"></h4>
                 <a href="#burger" rel="modal:open" data-modal><img src="media/burger.svg"
@@ -69,7 +69,7 @@
                     <div>
                         <h6 class="here">Home</h6>
                         <h6>À propos de moi</h6>
-                        <h6>Compétences</h6>
+                        <h6 class="sm:hidden">Compétences</h6>
                         <h6>Portfolio</h6>
                         <h6>Contact</h6>
                     </div>
@@ -91,22 +91,27 @@
 
             <!-- Footer contact -->
             <footer class="flex flex-row justify-between items-center p-2">
-                <img src="media/github.svg" alt="Logo de github">
-                <img src="media/linkedin.svg" alt="Logo de linkedin">
+                <a href="https://github.com/CDylan-source" target="_blank" rel="noopener noreferrer"><img
+                        src="media/github.svg" alt="Logo de github"></a>
+                <a href="https://www.linkedin.com/in/chapuis-dylan-373679210/" target="_blank"
+                    rel="noopener noreferrer"><img src="media/linkedin.svg" alt="Logo de linkedin"></a>
                 <h3>©Chapuis Dylan</h3>
             </footer>
         </div>
     </div>
-    <section class="flex flex-col items-center page_2 justify-between">
-        <h3 class="pb-2">À propos de moi</h3>
-        <p>Depuis toujours passionné par l’informatique et les nouvelles technologies, j’ai rejoint la formation
+    <section class="flex flex-col items-center page_2 justify-between sm:justify-start">
+        <h3 class="pb-2 sm:pb-8">À propos de moi</h3>
+        <p class="sm:pb-4">Depuis toujours passionné par l’informatique et les nouvelles technologies, j’ai rejoint la
+            formation
             de développeur web au sein de l’Access Code School en avril 2021.</p>
-        <p>Ça a été pour moi une réelle révélation, le plaisir de transformer l’abstrait en concret, le code en
+        <p class="sm:pb-4">Ça a été pour moi une réelle révélation, le plaisir de transformer l’abstrait en concret, le
+            code en
             page web, m’a rappelé ma première passion, les mathématiques.</p>
-        <p>Je n’ai maintenant qu’une hâte, confirmer cette expérience dans le monde professionnel.</p>
+        <p class="sm:pb-4">Je n’ai maintenant qu’une hâte, confirmer cette expérience dans le monde professionnel.</p>
         <button class="flex flex-row justify-center">
             <p class="p-2">Télécharger mon CV</p>
         </button>
+
     </section>
 
     <section class="flex flex-col items-center page_3 justify-start pb-4">
@@ -253,8 +258,68 @@
                 <li>ILLUSTRATOR</li>
             </ul>
             <button>
-                <p>Visiter le site</p>
+                <p class="hidden">Visiter le site</p>
             </button>
+        </div>
+    </div>
+
+    <div class="modal" id="site2">
+        <div>
+            <h2>L'accessibilité dans le web</h2>
+            <p>Projet doublement intéressant de par la découverte des outils d'accessibilité et d'ergonomie et par son
+                échange de maquettes.</p>
+            <h4>Mai 2021</h4>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>RESPONSIVE</li>
+                <li>PHOTOSHOP</li>
+                <li>ILLUSTRATOR</li>
+            </ul>
+            <button>
+                <p class="hidden">Visiter le site</p>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal" id="site3">
+        <div>
+            <h2>Carte de profil</h2>
+            <p>Présenté comme un petit projet, il a été parfait pour m'initier à TailwindCSS et confirmer ma
+                compréhension des flexbox !</p>
+            <h4>Mai 2021</h4>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>RESPONSIVE</li>
+                <li>TAILWINDCSS</li>
+            </ul>
+            <button>
+                <p class="hidden">Visiter le site</p>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal" id="site4">
+        <div>
+            <h2>Projet Quizzoot</h2>
+            <p>Le plus gros projet depuis le début de ma formation au sein de l'ACS, PDO, PHP, SQL et Ajax ! De plus,
+                étant un projet de groupe, j'ai pu y découvrir Trello et Figma en collaboration.</p>
+            <h4>Juin 2021</h4>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+                <li>AJAX</li>
+                <li>PHP</li>
+                <li>PDO</li>
+                <li>SQL</li>
+                <li>JQUERY</li>
+                <li>RESPONSIVE</li>
+            </ul>
+            <a href="https://dylanc.promo-66.codeur.online/quizzoot/" target="_blank" rel="noopener noreferrer"><button>
+                <p>Visiter le site</p>
+            </button></a>
         </div>
     </div>
 
@@ -267,6 +332,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
     <script src="js/app2.js"></script>
+
     <script src="js/app3.js"></script>
 </body>
 

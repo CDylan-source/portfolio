@@ -726,7 +726,10 @@ body .surglass footer img {
   color: white;
 }
 
-#site1 {
+#site1,
+#site2,
+#site3,
+#site4 {
   text-align: center;
   border-radius: 30px;
   font-family: marianne;
@@ -740,21 +743,33 @@ body .surglass footer img {
   padding: 0;
 }
 
-#site1 h2 {
+#site1 h2,
+#site2 h2,
+#site3 h2,
+#site4 h2 {
   font-weight: 500;
   font-size: 1.5rem;
 }
 
-#site1 p {
+#site1 p,
+#site2 p,
+#site3 p,
+#site4 p {
   font-weight: 400;
 }
 
-#site1 h4 {
+#site1 h4,
+#site2 h4,
+#site3 h4,
+#site4 h4 {
   font-weight: 300;
   font-size: 1.25rem;
 }
 
-#site1 ul {
+#site1 ul,
+#site2 ul,
+#site3 ul,
+#site4 ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -764,12 +779,15 @@ body .surglass footer img {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#site1 ul li {
+#site1 ul li,
+#site2 ul li,
+#site3 ul li,
+#site4 ul li {
   padding: 0.5rem;
   border-radius: 30px;
   background-color: #000A16;
@@ -777,9 +795,14 @@ body .surglass footer img {
   font-weight: 300;
   font-size: 1rem;
   margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
-#site1 div {
+#site1 div,
+#site2 div,
+#site3 div,
+#site4 div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -804,21 +827,33 @@ body .surglass footer img {
 }
 
 #site1 p,
-#site1 button {
+#site1 button,
+#site2 p,
+#site2 button,
+#site3 p,
+#site3 button,
+#site4 p,
+#site4 button {
   letter-spacing: 0.05em;
   font-size: 1rem;
   font-family: marianne;
   font-weight: 400;
 }
 
-#site1 button {
+#site1 button,
+#site2 button,
+#site3 button,
+#site4 button {
   color: white;
   background: -webkit-gradient(linear, left top, right top, from(#F5576C), to(#F093FB));
   background: linear-gradient(90deg, #F5576C 0%, #F093FB 100%);
   border-radius: 50px;
 }
 
-#site1 button p {
+#site1 button p,
+#site2 button p,
+#site3 button p,
+#site4 button p {
   background: -webkit-gradient(linear, left top, right top, from(rgba(245, 87, 108, 0.06)), to(rgba(240, 147, 251, 0.06)));
   background: linear-gradient(90deg, rgba(245, 87, 108, 0.06) 0%, rgba(240, 147, 251, 0.06) 100%);
   -webkit-box-shadow: inset 7.63333px -7.63333px 7.63333px rgba(184, 89, 136, 0.06), inset -7.63333px 7.63333px 7.63333px rgba(255, 255, 255, 0.06);
@@ -848,6 +883,53 @@ body .surglass footer img {
   }
   .page_6 article h5 {
     font-size: 0.8rem;
+  }
+  #site1,
+  #site2,
+  #site3,
+  #site4 {
+    height: 90vh;
+    top: 5vh;
+  }
+}
+
+@media (min-width: 640px) {
+  .page_2 {
+    height: 45vh;
+  }
+  .page_2 {
+    padding-bottom: 0;
+    padding-top: 10vh;
+  }
+  .page_3 {
+    padding-top: 0;
+    height: 55vh;
+  }
+  .page_4,
+  .page_5 {
+    height: 50vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .page_4 h3,
+  .page_5 h3 {
+    position: absolute;
+    top: 210vh;
+  }
+  .page_4 div,
+  .page_5 div {
+    width: 46vw;
+  }
+  .page_4 {
+    padding-bottom: 0;
+  }
+  .page_5 {
+    padding-top: 0;
+  }
+  body .surglass .curves_2 {
+    top: 45vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

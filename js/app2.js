@@ -7,10 +7,10 @@
 
        var height = $(window).height();
 
-       if (i < 5) {
-           i++;
-           $(window).scrollTop((height * i) + 1);
-       }
+
+       i++
+       $(window).scrollTop((height * i) + 1);
+
 
 
 
@@ -22,10 +22,10 @@
 
        var height = $(window).height();
 
-       if (i > 0) {
-           i--;
-           $(window).scrollTop(height * i)
-       }
+
+       i--;
+       $(window).scrollTop(height * i)
+
 
 
 
@@ -38,67 +38,121 @@
 
    $(window).scroll(function () {
        var scroll = $(window).scrollTop();
-       if (scroll == 0) {
-           $('.prev').hide();
-           i = 0;
-           $('#tsparticles').removeClass('hidden');
+       if (window.matchMedia('max-width:640px').matches) {
+           if (scroll == 0) {
+               $('.prev').hide();
+               i = 0;
+               $('#tsparticles').removeClass('hidden');
 
-           $('.curves_2').hide();
-           $('.curves').show();
-           $('.boucle').hide();
-           for (a = 1; a <= 5; a++) {
-               $('#burger h6:nth-child(' + a + ')').removeClass('here')
-           };
-           $('#burger h6:nth-child(1)').addClass('here');
+               $('.curves_2').hide();
+               $('.curves').show();
+               $('.boucle').hide();
+               for (a = 1; a <= 5; a++) {
+                   $('#burger h6:nth-child(' + a + ')').removeClass('here')
+               };
+               $('#burger h6:nth-child(1)').addClass('here');
 
-       } else if (scroll >= $(window).height() * 1.5 && scroll < $(window).height() * 2.5) {
-           $('#tsparticles').addClass('hidden');
-           $('.curves_2').show();
-           $('.curves').hide();
-           i = 2;
-           $('.boucle').hide();
-           $('.next').show();
-           for (a = 1; a <= 5; a++) {
-               $('#burger h6:nth-child(' + a + ')').removeClass('here')
-           };
-           $('#burger h6:nth-child(3)').addClass('here');
-       } else if (scroll < $(window).height() * 1.5 && scroll >= $(window).height()) {
-           $('#tsparticles').removeClass('hidden');
-           $('.curves_2').hide();
-           $('.curves').show();
-           $('.prev').show();
-           $('.next').show();
-           i = 1;
-           $('.boucle').hide();
-           for (a = 1; a <= 5; a++) {
-               $('#burger h6:nth-child(' + a + ')').removeClass('here')
-           };
-           $('#burger h6:nth-child(2)').addClass('here');
-       } else if (scroll >= $(window).height() * 2.5 && scroll < $(window).height() * 3.5) {
-           $('.curves_2').hide();
-           $('#tsparticles').addClass('hidden');
-           $('.curves').hide();
-           $('.boucle').show();
-           $('.next').show();
-           i = 3;
-           for (a = 1; a <= 5; a++) {
-               $('#burger h6:nth-child(' + a + ')').removeClass('here')
-           };
-           $('#burger h6:nth-child(4)').addClass('here');
-       } else if (scroll >= $(window).height() * 3.5 && scroll < $(window).height() * 4.5) {
-           $('.next').show();
-           i = 4;
-           for (a = 1; a <= 5; a++) {
-               $('#burger h6:nth-child(' + a + ')').removeClass('here')
-           };
-           $('#burger h6:nth-child(4)').addClass('here');
-       } else if (scroll >= $(window).height() * 4.5 && scroll < $(window).height() * 5.5) {
-           i = 5;
-           $('.next').hide();
-           for (a = 1; a <= 5; a++) {
-               $('#burger h6:nth-child(' + a + ')').removeClass('here')
-           };
-           $('#burger h6:nth-child(5)').addClass('here');
+           } else if (scroll >= $(window).height() * 1.5 && scroll < $(window).height() * 2.5) {
+               $('#tsparticles').addClass('hidden');
+               $('.curves_2').show();
+               $('.curves').hide();
+               i = 2;
+               $('.boucle').hide();
+               $('.next').show();
+               for (a = 1; a <= 5; a++) {
+                   $('#burger h6:nth-child(' + a + ')').removeClass('here')
+               };
+               $('#burger h6:nth-child(3)').addClass('here');
+           } else if (scroll < $(window).height() * 1.5 && scroll >= $(window).height()) {
+               $('#tsparticles').removeClass('hidden');
+               $('.curves_2').hide();
+               $('.curves').show();
+               $('.prev').show();
+               $('.next').show();
+               i = 1;
+               $('.boucle').hide();
+               for (a = 1; a <= 5; a++) {
+                   $('#burger h6:nth-child(' + a + ')').removeClass('here')
+               };
+               $('#burger h6:nth-child(2)').addClass('here');
+           } else if (scroll >= $(window).height() * 2.5 && scroll < $(window).height() * 3.5) {
+               $('.curves_2').hide();
+               $('#tsparticles').addClass('hidden');
+               $('.curves').hide();
+               $('.boucle').show();
+               $('.next').show();
+               i = 3;
+               for (a = 1; a <= 5; a++) {
+                   $('#burger h6:nth-child(' + a + ')').removeClass('here')
+               };
+               $('#burger h6:nth-child(4)').addClass('here');
+           } else if (scroll >= $(window).height() * 3.5 && scroll < $(window).height() * 4.5) {
+               $('.next').show();
+               i = 4;
+               for (a = 1; a <= 5; a++) {
+                   $('#burger h6:nth-child(' + a + ')').removeClass('here')
+               };
+               $('#burger h6:nth-child(4)').addClass('here');
+           } else if (scroll >= $(window).height() * 4.5 && scroll < $(window).height() * 5.5) {
+               i = 5;
+               $('.next').hide();
+               for (a = 1; a <= 5; a++) {
+                   $('#burger h6:nth-child(' + a + ')').removeClass('here')
+               };
+               $('#burger h6:nth-child(5)').addClass('here');
+           }
+       } else {
+           if (scroll == 0) {
+               $('.prev').hide();
+               i = 0;
+               $('#tsparticles').removeClass('hidden');
+
+               $('.curves_2').hide();
+               $('.curves').show();
+               $('.boucle').hide();
+               for (a = 1; a <= 5; a++) {
+                   $('#burger h6:nth-child(' + a + ')').removeClass('here')
+               };
+               $('#burger h6:nth-child(1)').addClass('here');
+
+           } else if (scroll < $(window).height() * 1.5 && scroll >= $(window).height()) {
+               $('#tsparticles').addClass('hidden');
+               $('.curves_2').show();
+               $('.curves').hide();
+               $('.prev').show();
+               $('.next').show();
+               i = 1;
+               $('.boucle').hide();
+               for (a = 1; a <= 5; a++) {
+                   $('#burger h6:nth-child(' + a + ')').removeClass('here')
+               };
+               $('#burger h6:nth-child(2)').addClass('here');
+
+           } else if (scroll >= $(window).height() * 1.5 && scroll < $(window).height() * 2.5) {
+               $('#tsparticles').addClass('hidden');
+               $('.curves_2').hide();
+               $('.curves').hide();
+               i = 2;
+               $('.boucle').show();
+               $('.next').show();
+               for (a = 1; a <= 5; a++) {
+                   $('#burger h6:nth-child(' + a + ')').removeClass('here')
+               };
+               $('#burger h6:nth-child(4)').addClass('here');
+
+           } else if (scroll >= $(window).height() * 2.5 && scroll < $(window).height() * 3.5) {
+               $('.curves_2').hide();
+               $('#tsparticles').addClass('hidden');
+               $('.curves').hide();
+               $('.boucle').show();
+               $('.next').hide();
+               i = 3;
+               for (a = 1; a <= 5; a++) {
+                   $('#burger h6:nth-child(' + a + ')').removeClass('here')
+               };
+               $('#burger h6:nth-child(5)').addClass('here');
+
+           }
        }
    });
 
@@ -185,4 +239,8 @@
    $('.modal h6:nth-child(5)').bind('click', function () {
        $(window).scrollTop(($(window).height() * 5) + 1);
        $.modal.close();
+   });
+
+   $('.logo').bind('click', function () {
+       $(window).scrollTop(0);
    });
