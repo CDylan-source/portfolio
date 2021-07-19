@@ -184,6 +184,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background: no-repeat center center fixed url(../media/background.png);
   background-size: cover;
   color: #000A16;
@@ -191,10 +192,12 @@ body {
 
 body .global {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 body .glass {
   height: 92vh;
+  height: calc(var(--vh, 1vh) * 92);
   width: 95vw;
   top: 4vh;
   position: fixed;
@@ -332,6 +335,7 @@ body .surglass main .profil {
   position: absolute;
   top: 31.5%;
   height: 37vh;
+  height: calc(var(--vh, 1vh) * 37);
   left: calc(50vw - 15vh);
 }
 
@@ -359,6 +363,7 @@ body .surglass footer img {
 .page_5,
 .page_6 {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 95vw;
   padding-bottom: 12.5vh;
   padding-top: 12.5vh;
@@ -470,6 +475,7 @@ body .surglass footer img {
 .page_5 div img,
 .page_6 div img {
   height: 25vh;
+  height: calc(var(--vh, 1vh) * 25);
 }
 
 .page_2 div button,
@@ -512,6 +518,7 @@ body .surglass footer img {
 
 .page_3 li img {
   height: 10vh;
+  height: calc(var(--vh, 1vh) * 10);
 }
 
 .page_3 li h4 {
@@ -535,36 +542,99 @@ body .surglass footer img {
   color: #6764FF;
 }
 
-.page_6 {
+.page_6 h3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: titre;
+  text-align: center;
+}
+
+.page_6 form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 17vh 17vh 17vh 1fr;
-      grid-template-rows: 1fr 17vh 17vh 17vh 1fr;
+  -ms-grid-rows: 2rem 1fr 1fr 1fr 2fr 1fr;
+      grid-template-rows: 2rem 1fr 1fr 1fr 2fr 1fr;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-      grid-template-areas: "titre" "article1" "article2" "article3" "end";
+  gap: 3%;
+  font-family: marianne;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      grid-template-areas: "titre" "name" "email" "sujet" "message" "bouton";
 }
 
-.page_6 article:nth-child(2) {
+.page_6 form input:not(:placeholder-shown):invalid {
+  border: red 3px solid;
+}
+
+.page_6 form input {
+  max-width: 75%;
+  min-width: 50%;
+  height: 2.5rem;
+  font-size: 1rem;
+  padding: 1.5rem;
+  border-radius: 20px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.page_6 form textarea {
+  font-size: 1rem;
+  padding: 1.5rem;
+  max-width: 75%;
+  min-width: 50%;
+  border-radius: 20px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  resize: none;
+  max-height: 10rem;
+  min-height: 5rem;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: message;
+}
+
+.page_6 form input:nth-of-type(1) {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: article1;
+  grid-area: name;
 }
 
-.page_6 article:nth-child(3) {
+.page_6 form input:nth-of-type(2) {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: article2;
+  grid-area: email;
 }
 
-.page_6 article:nth-child(4) {
+.page_6 form input:nth-of-type(3) {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
-  grid-area: article3;
+  grid-area: sujet;
 }
 
-.page_6 h3 {
+.page_6 form button {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: bouton;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 3rem;
+  font-size: 1rem;
+}
+
+.page_6 form h3 {
   text-align: center;
+}
+
+.page_6 p {
+  text-align: center;
+  color: green;
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: bouton;
 }
 
 .p-right-out {
@@ -599,6 +669,7 @@ body .surglass footer img {
   z-index: -1;
   width: 95vw;
   height: 50vh;
+  height: calc(var(--vh, 1vh) * 50);
 }
 
 .curve {
@@ -730,6 +801,7 @@ body .surglass footer img {
   font-family: marianne;
   width: 95vw;
   height: 70vh;
+  height: calc(var(--vh, 1vh) * 70);
   position: fixed;
   right: 2.5vw;
   top: 15vh;
@@ -863,8 +935,17 @@ body .surglass footer img {
   padding-bottom: 0.25rem;
 }
 
-.logo, header li, footer img, .page_3 img {
+.logo,
+header li,
+footer img,
+.page_3 img {
   cursor: pointer;
+}
+
+input:focus,
+#message:focus,
+button:focus {
+  outline: none;
 }
 
 @media (max-width: 330px) {
@@ -876,17 +957,12 @@ body .surglass footer img {
   .page_5 button p span:nth-child(2) {
     display: none;
   }
-  .page_6 article {
-    padding-left: 1%;
-  }
-  .page_6 article h5 {
-    font-size: 0.8rem;
-  }
   #site1,
   #site2,
   #site3,
   #site4 {
     height: 90vh;
+    height: calc(var(--vh, 1vh) * 90);
     top: 5vh;
   }
 }
@@ -894,6 +970,7 @@ body .surglass footer img {
 @media (min-width: 640px) {
   .page_2 {
     height: 45vh;
+    height: calc(var(--vh, 1vh) * 45);
   }
   .page_2 {
     padding-bottom: 0;
@@ -901,10 +978,12 @@ body .surglass footer img {
   .page_3 {
     padding-top: 0;
     height: 55vh;
+    height: calc(var(--vh, 1vh) * 55);
   }
   .page_4,
   .page_5 {
     height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -941,6 +1020,7 @@ body .surglass footer img {
   main img {
     position: absolute;
     height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
     top: 25vh;
     left: calc(100vw - 60vh);
     overflow: hidden;
@@ -963,34 +1043,18 @@ body .surglass footer img {
   body .page_2 button p {
     width: auto;
   }
-  .page_6 {
-    -ms-grid-rows: 1fr 17vh 17vh 1fr;
-        grid-template-rows: 1fr 17vh 17vh 1fr;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "titre titre" "article1 article2" "article3 article3"  "end end";
-  }
-  .page_6 article:nth-child(2) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: article1;
-    -ms-grid-column-align: center;
-        justify-self: center;
-  }
-  .page_6 article:nth-child(3) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: article2;
-    -ms-grid-column-align: center;
-        justify-self: center;
-  }
-  .page_6 article:nth-child(4) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: article3;
-    -ms-grid-column-align: center;
-        justify-self: center;
+  .page_6 form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 3%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+        grid-template-areas: "name" "email" "sujet" "message" "bouton";
   }
 }
 /*# sourceMappingURL=style.css.map */

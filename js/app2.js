@@ -1,11 +1,18 @@
    var i = 0;
+   let vh = window.innerHeight * 0.01;
+   document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+   window.addEventListener('resize', () => {
+  // We execute the same script as before
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
    $(window).scrollTop(0);
 
    $('.next').bind('click', function () {
        $('.prev').show();
 
-       var height = $(window).height();
+       var height = window.innerHeight;
 
 
        i++
@@ -20,7 +27,7 @@
    $('.prev').bind('click', function () {
        $('.next').show();
 
-       var height = $(window).height();
+       var height = window.innerHeight;
 
 
        i--;
@@ -52,7 +59,7 @@
                };
                $('#burger h6:nth-child(1)').addClass('here');
 
-           } else if (scroll >= $(window).height() * 1.5 && scroll < $(window).height() * 2.5) {
+           } else if (scroll >= window.innerHeight * 1.5 && scroll < window.innerHeight * 2.5) {
                $('#tsparticles').addClass('hidden');
                $('.curves_2').show();
                $('.curves').hide();
@@ -63,7 +70,7 @@
                    $('#burger h6:nth-child(' + a + ')').removeClass('here')
                };
                $('#burger h6:nth-child(3)').addClass('here');
-           } else if (scroll < $(window).height() * 1.5 && scroll >= $(window).height() * 0.5) {
+           } else if (scroll < window.innerHeight * 1.5 && scroll >= window.innerHeight * 0.5) {
                $('#tsparticles').removeClass('hidden');
                $('.curves_2').hide();
                $('.curves').show();
@@ -75,7 +82,7 @@
                    $('#burger h6:nth-child(' + a + ')').removeClass('here')
                };
                $('#burger h6:nth-child(2)').addClass('here');
-           } else if (scroll >= $(window).height() * 2.5 && scroll < $(window).height() * 3.5) {
+           } else if (scroll >= window.innerHeight * 2.5 && scroll < window.innerHeight * 3.5) {
                $('.curves_2').hide();
                $('#tsparticles').addClass('hidden');
                $('.curves').hide();
@@ -86,14 +93,14 @@
                    $('#burger h6:nth-child(' + a + ')').removeClass('here')
                };
                $('#burger h6:nth-child(4)').addClass('here');
-           } else if (scroll >= $(window).height() * 3.5 && scroll < $(window).height() * 4.5) {
+           } else if (scroll >= window.innerHeight * 3.5 && scroll < window.innerHeight * 4.5) {
                $('.next').show();
                i = 4;
                for (a = 1; a <= 5; a++) {
                    $('#burger h6:nth-child(' + a + ')').removeClass('here')
                };
                $('#burger h6:nth-child(4)').addClass('here');
-           } else if (scroll >= $(window).height() * 4.5 && scroll < $(window).height() * 5.5) {
+           } else if (scroll >= window.innerHeight * 4.5 && scroll < window.innerHeight * 5.5) {
                i = 5;
                $('.next').hide();
                for (a = 1; a <= 5; a++) {
@@ -118,7 +125,7 @@
                $('header ul li:nth-child(1)').addClass('here');
 
 
-           } else if (scroll < $(window).height() * 1.5 && scroll >= $(window).height() * 0.5) {
+           } else if (scroll < window.innerHeight * 1.5 && scroll >= window.innerHeight * 0.5) {
                $('#tsparticles').addClass('hidden');
                $('.curves_2').show();
                $('.curves').hide();
@@ -133,7 +140,7 @@
                $('#burger h6:nth-child(2)').addClass('here');
                $('header ul li:nth-child(2)').addClass('here');
 
-           } else if (scroll >= $(window).height() * 1.5 && scroll < $(window).height() * 2.5) {
+           } else if (scroll >= window.innerHeight * 1.5 && scroll < window.innerHeight * 2.5) {
                $('#tsparticles').addClass('hidden');
                $('.curves_2').hide();
                $('.curves').hide();
@@ -147,7 +154,7 @@
                $('#burger h6:nth-child(4)').addClass('here');
                $('header ul li:nth-child(3)').addClass('here');
 
-           } else if (scroll >= $(window).height() * 2.5 && scroll < $(window).height() * 3.5) {
+           } else if (scroll >= window.innerHeight * 2.5 && scroll < window.innerHeight * 3.5) {
                $('.curves_2').hide();
                $('#tsparticles').addClass('hidden');
                $('.curves').hide();
@@ -234,19 +241,19 @@
 
    });
    $('.modal h6:nth-child(2)').bind('click', function () {
-       $(window).scrollTop($(window).height() + 1);
+       $(window).scrollTop(window.innerHeight + 1);
        $.modal.close();
    });
    $('.modal h6:nth-child(3)').bind('click', function () {
-       $(window).scrollTop(($(window).height() * 2) + 1);
+       $(window).scrollTop((window.innerHeight * 2) + 1);
        $.modal.close();
    });
    $('.modal h6:nth-child(4)').bind('click', function () {
-       $(window).scrollTop(($(window).height() * 3) + 1);
+       $(window).scrollTop((window.innerHeight * 3) + 1);
        $.modal.close();
    });
    $('.modal h6:nth-child(5)').bind('click', function () {
-       $(window).scrollTop(($(window).height() * 5) + 1);
+       $(window).scrollTop((window.innerHeight * 5) + 1);
        $.modal.close();
    });
 
@@ -261,16 +268,30 @@
    });
 
    $('header ul li:nth-child(2)').bind('click', function(){
-        $(window).scrollTop($(window).height());
+        $(window).scrollTop(window.innerHeight);
        
    });
 
    $('header ul li:nth-child(3)').bind('click', function(){
-        $(window).scrollTop($(window).height() * 2);
+        $(window).scrollTop(window.innerHeight * 2);
        
    });
 
    $('header ul li:nth-child(4)').bind('click', function(){
-        $(window).scrollTop($(window).height() * 3);
+        $(window).scrollTop(window.innerHeight * 3);
        
    });
+
+   $('form').bind('submit', function(e){
+    e.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: "/portfolio/php/mail.php",
+        data: $(this).serialize(),
+        success: function (response) {
+            var resp = JSON.parse(response);
+            $('.page_6 form button').remove();
+            $('.page_6').append("<p>" + resp +"</p>");
+        }
+    });
+});

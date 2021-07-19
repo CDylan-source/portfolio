@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chapuis Dylan">
+    <meta name="keyword" content="Portfolio, Développeur, Developer, French, Français">
+    <meta name="description" content="Portfolio de Dylan Chapuis">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="CSS/tailwind.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Chapuis Dylan</title>
 </head>
@@ -88,9 +91,9 @@
                 <section class="flex flex-col  h-full page_1 ">
                     <h1 class="pb-2 pt-4 text-center">CHAPUIS DYLAN</h1>
                     <h2 class="text-center">DÉVELOPPEUR WEB JUNIOR</h2>
-                    <img src="media/profile.svg" alt="Photo de moi-même entourée d'un rond jaune avec une ombre portée"
+                    <img src="media/profil.png" alt="Photo de moi-même entourée d'un rond jaune avec une ombre portée"
                         class="profil lg:hidden">
-                    <img src="media/profile_desktop.svg"
+                    <img src="media/profil.png"
                         alt="Photo de moi-même entourée d'un rond jaune avec une ombre portée" class="hidden lg:block ">
                     <p class="hidden xl:flex w-1/4 pl-8 ml-24 text-xl text-right mt-auto flex-col"><span>Je suis pauvre et n’ai que mes rêves.
                         Sous tes pas je les ai déroulés.
@@ -110,15 +113,15 @@
             </footer>
         </div>
     </div>
-    <section class="flex flex-col items-center page_2 justify-between sm:justify-start">
-        <h3 class="pb-2 sm:pb-4 lg:hidden">À propos de moi</h3>
-        <p class="sm:pb-4 xl:w-3/4 lg:mt-2 ">Depuis toujours passionné par l’informatique et les nouvelles technologies, j’ai rejoint la
+    <section class="flex flex-col items-center page_2 justify-between ">
+        <h3 class="pb-2  lg:hidden">À propos de moi</h3>
+        <p class=" xl:w-3/4 lg:mt-2 ">Depuis toujours passionné par l’informatique et les nouvelles technologies, j’ai rejoint la
             formation
             de développeur web au sein de l’Access Code School en avril 2021.</p>
-        <p class="sm:pb-4 xl:w-3/4">Ça a été pour moi une réelle révélation, le plaisir de transformer l’abstrait en concret, le
+        <p class=" xl:w-3/4">Ça a été pour moi une réelle révélation, le plaisir de transformer l’abstrait en concret, le
             code en
             page web, m’a rappelé ma première passion, les mathématiques.</p>
-        <p class="sm:pb-4 xl:w-3/4">Je n’ai maintenant qu’une hâte, confirmer cette expérience dans le monde professionnel.</p>
+        <p class=" xl:w-3/4">Je n’ai maintenant qu’une hâte, confirmer cette expérience dans le monde professionnel.</p>
         <a href="media/chapuis_dylan_cv.pdf" target="_blank" rel="noopener noreferrer"><button class="flex flex-row justify-center">
             <p class="p-2">Télécharger mon CV</p>
         </button></a>
@@ -182,7 +185,7 @@
         <h3 class="pb-2 lg:hidden">Portfolio</h3>
         <a href="#site1" rel="modal:open">
             <div class="flex flex-col items-center">
-                <img src="media/site_1.svg" alt="Présentation de mon premier site en multi écrans">
+                <img src="media/site1.png" alt="Présentation de mon premier site en multi écrans">
                 <button>
                     <p><span>Balises HTML et sélecteurs CSS</span><span>Le premier projet !</span></p>
                 </button>
@@ -190,7 +193,7 @@
         </a>
         <a href="#site2" rel="modal:open">
             <div class="flex flex-col items-center">
-                <img src="media/site_2.svg" alt="Présentation de mon premier site en multi écrans">
+                <img src="media/site2.png" alt="Présentation de mon premier site en multi écrans">
                 <button>
                     <p><span>L’accessibilité dans le web</span><span>Intégration d’une maquette</span></p>
                 </button>
@@ -202,7 +205,7 @@
         <h3 class="pb-2 lg:hidden">Portfolio</h3>
         <a href="#site3" rel="modal:open">
             <div class="flex flex-col items-center">
-                <img src="media/site_3.svg" alt="Présentation de mon premier site en multi écrans">
+                <img src="media/site3.png" alt="Présentation de mon premier site en multi écrans">
                 <button>
                     <p><span>Carte de profil</span><span>Exercice d’intégration</span></p>
                 </button>
@@ -210,7 +213,7 @@
         </a>
         <a href="#site4" rel="modal:open">
             <div class="flex flex-col items-center">
-                <img src="media/site_4.svg" alt="Présentation de mon premier site en multi écrans">
+                <img src="media/site4.png" alt="Présentation de mon premier site en multi écrans">
                 <button>
                     <p><span>Projet Quizzoot</span><span>Mon projet le plus abouti</span></p>
                 </button>
@@ -220,39 +223,22 @@
 
     <section class="page_6 pb-4 ">
         <h3 class="lg:hidden">Contact</h3>
-        <article class="flex flex-row">
-            <img src="media/house.svg" alt="Logo d'une maison" class="mr-4">
-            <ul>
-                <li>
-                    <h4>ADRESSE</h4>
-                </li>
-                <li>
-                    <h5>1 bis rue des Perrières 70100 Gray</h5>
-                </li>
-            </ul>
-        </article>
-        <article class="flex flex-row">
-            <img src="media/tel.svg" alt="Logo d'une maison" class="mr-4">
-            <ul>
-                <li>
-                    <h4>TÉLÉPHONE</h4>
-                </li>
-                <li>
-                    <h5>06 33 63 06 10</h5>
-                </li>
-            </ul>
-        </article>
-        <article class="flex flex-row">
-            <img src="media/mail.svg" alt="Logo d'une maison" class="mr-4">
-            <ul>
-                <li>
-                    <h4>E-MAIL</h4>
-                </li>
-                <li>
-                    <h5>chapuis.dylan18@gmail.com</h5>
-                </li>
-            </ul>
-        </article>
+       <form>
+
+            
+
+            <!-- Formulaires -->
+            <input type="text" name="name" id="name" placeholder="Nom" pattern="[a-zA-Z]{2,}" required/>
+            <!-- Pattern pour name -->
+            <input type="email" name="mail" id="email" placeholder="Email" required
+                pattern="[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})" />
+            <!-- Pattern pour email -->
+            <input type="text" name="subject" id="subject" placeholder="Sujet" required/>
+            <textarea name="message" id="message" rows="8" placeholder="Message" required minlength="1"></textarea>
+            <!-- Textarea pour la taille du bloc message -->
+            <button id="envoyer" type="submit" class="envoyer"><!-- Euh... c'est juste un bouton, nothing to see here -->Envoyer le mail &#x27A1;</button>
+        </form>
+        
 
     </section>
     <div class="modal" id="site1">

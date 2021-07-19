@@ -207,6 +207,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     background: no-repeat center center fixed url(../media/background.png);
     background-size: cover;
     color: #000A16;
@@ -215,11 +216,13 @@ body {
     .global {
 
         height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
 
     }
 
     .glass {
         height: 92vh;
+        height: calc(var(--vh, 1vh) * 92);
         width: 95vw;
         top: 4vh;
         position: fixed;
@@ -372,6 +375,7 @@ body {
                 position: absolute;
                 top: 31.5%;
                 height: 37vh;
+                height: calc(var(--vh, 1vh) * 37);
                 left: calc(50vw - 15vh);
             }
 
@@ -412,6 +416,7 @@ body {
 .page_6 {
 
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     width: 95vw;
     padding-bottom: 12.5vh;
     padding-top: 12.5vh;
@@ -483,6 +488,7 @@ body {
 
         img {
             height: 25vh;
+            height: calc(var(--vh, 1vh) * 25);
         }
 
         button {
@@ -510,6 +516,7 @@ body {
 
         img {
             height: 10vh;
+            height: calc(var(--vh, 1vh) * 10);
         }
 
         h4 {
@@ -536,34 +543,98 @@ body {
     }
 }
 
-.page_6 {
+.page_6 h3 {
+    grid-area: titre;
+    text-align: center;
+}
+
+.page_6 form {
     display: grid;
-    grid-template-rows: 1fr 17vh 17vh 17vh 1fr;
+    grid-template-rows: 2rem 1fr 1fr 1fr 2fr 1fr;
     grid-template-columns: 1fr;
+    gap: 3%;
+    font-family: marianne;
+    align-items: center;
     grid-template-areas:
-
         "titre"
-        "article1"
-        "article2"
-        "article3"
-        "end";
+        "name"
+        "email"
+        "sujet"
+        "message"
+        "bouton"
+        ;
 
 
-    article:nth-child(2) {
-        grid-area: article1;
+
+
+
+
+    input:not(:placeholder-shown):invalid {
+        border: red 3px solid;
     }
 
-    article:nth-child(3) {
-        grid-area: article2;
+
+
+
+
+
+
+    input {
+        max-width: 75%;
+        min-width: 50%;
+        height: 2.5rem;
+        font-size: 1rem;
+        padding: 1.5rem;
+        border-radius: 20px;
+        justify-self: center;
+
     }
 
-    article:nth-child(4) {
-        grid-area: article3;
+    textarea {
+        font-size: 1rem;
+        padding: 1.5rem;
+        max-width: 75%;
+        min-width: 50%;
+        border-radius: 20px;
+        justify-self: center;
+        resize: none;
+        max-height: 10rem;
+        min-height: 5rem;
+        grid-area: message;
     }
+
+    input:nth-of-type(1) {
+        grid-area: name;
+    }
+
+    input:nth-of-type(2) {
+        grid-area: email;
+    }
+
+    input:nth-of-type(3) {
+        grid-area: sujet;
+    }
+
+    button {
+        grid-area: bouton;
+        justify-self: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+
 
     h3 {
         text-align: center;
     }
+}
+
+.page_6 p {
+    text-align: center;
+    color: green;
+    grid-area: bouton;
+
 }
 
 .p-right-out {
@@ -603,6 +674,7 @@ $curveCount: 6;
     z-index: -1;
     width: 95vw;
     height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
 }
 
 
@@ -690,6 +762,7 @@ $curveCount: 6;
     font-family: marianne;
     width: 95vw;
     height: 70vh;
+    height: calc(var(--vh, 1vh) * 70);
     position: fixed;
     right: 2.5vw;
     top: 15vh;
@@ -776,10 +849,19 @@ $curveCount: 6;
     }
 
 }
-.logo, header li, footer img, .page_3 img{
-    cursor:pointer;
+
+.logo,
+header li,
+footer img,
+.page_3 img {
+    cursor: pointer;
 }
 
+input:focus,
+#message:focus,
+button:focus {
+    outline: none;
+}
 
 @media (max-width : 330px) {
 
@@ -797,21 +879,14 @@ $curveCount: 6;
         }
     }
 
-    .page_6 {
-        article {
-            padding-left: 1%;
 
-            h5 {
-                font-size: 0.8rem;
-            }
-        }
-    }
 
     #site1,
     #site2,
     #site3,
     #site4 {
         height: 90vh;
+        height: calc(var(--vh, 1vh) * 90);
         top: 5vh;
     }
 }
@@ -819,6 +894,7 @@ $curveCount: 6;
 @media (min-width:640px) {
     .page_2 {
         height: 45vh;
+        height: calc(var(--vh, 1vh) * 45);
     }
 
     .page_2 {
@@ -829,11 +905,13 @@ $curveCount: 6;
     .page_3 {
         padding-top: 0;
         height: 55vh;
+        height: calc(var(--vh, 1vh) * 55);
     }
 
     .page_4,
     .page_5 {
         height: 50vh;
+        height: calc(var(--vh, 1vh) * 50);
         flex-direction: row;
 
         h3 {
@@ -879,6 +957,7 @@ $curveCount: 6;
         img {
             position: absolute;
             height: 50vh;
+            height: calc(var(--vh, 1vh) * 50);
             top: 25vh;
             left: calc(100vw - 60vh);
             overflow: hidden
@@ -924,35 +1003,18 @@ $curveCount: 6;
 
     }
 
-
-    .page_6 {
-        grid-template-rows: 1fr 17vh 17vh 1fr;
-        grid-template-columns: 1fr 1fr;
+    .page_6 form {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 3%;
+        align-items: center;
         grid-template-areas:
-
-            "titre titre"
-            "article1 article2"
-            "article3 article3"
-
-            "end end";
-
-
-        article:nth-child(2) {
-            grid-area: article1;
-            justify-self: center;
-        }
-
-        article:nth-child(3) {
-            grid-area: article2;
-            justify-self: center;
-        }
-
-        article:nth-child(4) {
-            grid-area: article3;
-            justify-self: center;
-        }
-
-
-
+            "name"
+            "email"
+            "sujet"
+            "message"
+            "bouton";
     }
+
 }
