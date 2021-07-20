@@ -569,16 +569,16 @@ body {
 }
 .page_6 form {
     display: grid;
-    align-self: center;
-    height: 95%;
-    max-height: 95%;
+  
+    height: 85%;
+    max-height: 100%;
     width: 100%;
-    align-self: center;
+   
     grid-template-rows: 1rem 1fr 1fr 1fr 1fr 2fr 1fr;
     grid-template-columns: 1fr;
-    
+    gap:3%;
     font-family: marianne;
-    align-items: center;
+   
     grid-template-areas:
         "titre"
         "name"
@@ -608,7 +608,7 @@ body {
         width: 75%;
         max-width: 700px;
         font-size: 0.8rem;
-        padding: 1.2rem;
+        padding: 1rem;
         border-radius: 20px;
         justify-self: center;
 
@@ -616,7 +616,7 @@ body {
 
     textarea {
         font-size: 0.8rem;
-        padding: 1.2rem;
+        padding: 1rem;
         width: 75%;
         max-width: 700px;
         border-radius: 20px;
@@ -624,7 +624,7 @@ body {
         resize: none;
         height: fit-content;
         max-height: 8rem;
-        min-height: 3rem;
+        
         grid-area: message;
         font-family:marianne;
     }
@@ -799,7 +799,7 @@ $curveCount: 6;
      left: 50%;
      top: 50%;
      transform: translate(-50%, -50%);
-    background: no-repeat center center fixed url(../media/background.png);
+    background: no-repeat center center  url(../media/background.png);
     background-size: cover;
     padding: 0;
 
@@ -842,10 +842,7 @@ $curveCount: 6;
         justify-content: space-around;
         width: 100%;
         height: 100%;
-        background: rgba(255, 255, 255, 0.2);
-        box-shadow: inset 34px -34px 34px rgba(149, 149, 149, 0.3),
-            inset -34px 34px 34px rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(60.52px);
+        
         padding: 1rem;
         border-radius: 30px;
         align-items: center;
@@ -921,6 +918,7 @@ button:focus {
         height: 90vh;
         height: calc(var(--vh, 1vh) * 90);
         top: 5vh;
+        top: calc(var(--vh, 1vh) * 5);
     }
 }
 
@@ -1046,24 +1044,18 @@ button:focus {
     .page_6 form {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr 1fr 2fr 1fr;
-        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
         gap: 3%;
         align-items: center;
         grid-template-areas:
-            "doggo panneau name"
-            "doggo panneau firstname"
-            "doggo panneau email"
-            "doggo panneau sujet"
-            "doggo panneau message"
-            "doggo panneau bouton";
+            "doggo name"
+            "doggo firstname"
+            "doggo email"
+            "doggo sujet"
+            "doggo message"
+            "doggo bouton";
     }
-    .panneau{
-        display:block;
-        grid-area: panneau;
-        max-width: 55%;
-        max-height:50%;
-        justify-self:center;
-    }
+    
     .doggo{
         
         display:block;

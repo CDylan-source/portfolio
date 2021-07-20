@@ -3,10 +3,12 @@
    document.documentElement.style.setProperty('--vh', `${vh}px`);
 
    window.addEventListener('resize', () => {
-  // We execute the same script as before
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
+       let scroll = $(window).scrollTop();
+       vh = window.innerHeight * 0.01;
+       document.documentElement.style.setProperty('--vh', `${vh}px`);
+       $(window).scrollTop(scroll);
+
+   });
    $(window).scrollTop(0);
 
    $('.next').bind('click', function () {
@@ -261,37 +263,37 @@
        $(window).scrollTop(0);
    });
 
-   
-       $('header ul li:nth-child(1)').bind('click', function(){
-        $(window).scrollTop($(window).height(0));
-       
+
+   $('header ul li:nth-child(1)').bind('click', function () {
+       $(window).scrollTop($(window).height(0));
+
    });
 
-   $('header ul li:nth-child(2)').bind('click', function(){
-        $(window).scrollTop(window.innerHeight);
-       
+   $('header ul li:nth-child(2)').bind('click', function () {
+       $(window).scrollTop(window.innerHeight);
+
    });
 
-   $('header ul li:nth-child(3)').bind('click', function(){
-        $(window).scrollTop(window.innerHeight * 2);
-       
+   $('header ul li:nth-child(3)').bind('click', function () {
+       $(window).scrollTop(window.innerHeight * 2);
+
    });
 
-   $('header ul li:nth-child(4)').bind('click', function(){
-        $(window).scrollTop(window.innerHeight * 3);
-       
+   $('header ul li:nth-child(4)').bind('click', function () {
+       $(window).scrollTop(window.innerHeight * 3);
+
    });
 
-   $('form').bind('submit', function(e){
-    e.preventDefault();
-    $.ajax({
-        type: 'POST',
-        url: "/portfolio/php/mail.php",
-        data: $(this).serialize(),
-        success: function (response) {
-            var resp = JSON.parse(response);
-            $('.page_6 form button').remove();
-            $('.page_6').append("<p>" + resp +"</p>");
-        }
-    });
-});
+   $('form').bind('submit', function (e) {
+       e.preventDefault();
+       $.ajax({
+           type: 'POST',
+           url: "/portfolio/php/mail.php",
+           data: $(this).serialize(),
+           success: function (response) {
+               var resp = JSON.parse(response);
+               $('.page_6 form button').remove();
+               $('.page_6').append("<p>" + resp + "</p>");
+           }
+       });
+   });

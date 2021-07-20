@@ -233,14 +233,14 @@
 
 
             <!-- Formulaires -->
-            <input type="text" name="name" id="name" placeholder="Nom" pattern="[a-zA-Z]{2,}" required />
-            <input type="text" name="firstname" id="firstname" placeholder="Prénom" pattern="[a-zA-Z]{2,}" required />
+            <input type="text" name="name" id="name" placeholder="Nom" pattern="^[a-zA-ZéàèêâûôîÉÀÈËëÊÂÎÛÔ]{1,}([-']?([a-zA-ZéàèêâûôîÉÀÈËëÊÂÎÛÔ])$)" required />
+            <input type="text" name="firstname" id="firstname" placeholder="Prénom" pattern="^[a-zA-ZéàèêâûôîÉÀÈËëÊÂÎÛÔ]{1,}([-']?([a-zA-ZéàèêâûôîÉÀÈËëÊÂÎÛÔ])$)" required />
             <!-- Pattern pour name -->
             <input type="email" name="mail" id="email" placeholder="Email" required
                 pattern="[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})" />
             <!-- Pattern pour email -->
             <input type="text" name="subject" id="subject" placeholder="Sujet" required />
-            <textarea name="message" id="message" rows="8" placeholder="Message" required minlength="1"></textarea>
+            <textarea name="message" id="message" rows="4" placeholder="Message" required minlength="1"></textarea>
             <!-- Textarea pour la taille du bloc message -->
             <button id="envoyer" type="submit" class="envoyer">
                 <!-- Euh... c'est juste un bouton, nothing to see here -->Envoyer le mail &#x27A1;</button>
@@ -288,7 +288,7 @@
                     </div>
                 </div>
             </div>
-            <img src="media/signal.svg" alt="Panneau avec écrit : Contacter mon maître ici !" class="hidden panneau">
+            
         </form>
 
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position:absolute; display:none;">
