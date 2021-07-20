@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="author" content="Chapuis Dylan">
     <meta name="keyword" content="Portfolio, Développeur, Developer, French, Français">
     <meta name="description" content="Portfolio de Dylan Chapuis">
@@ -21,9 +22,9 @@
         <div class="surglass  flex flex-col justify-center">
             <div id="tsparticles"></div>
 
-            <img src="media/curves.svg" alt="" class="curves">
+            <img src="media/curves.png" alt="" class="curves">
 
-            <svg viewbox="0 0 386 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="curves_2 hidden">
+            <svg viewbox="0 0 386 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="curves_2 hidden" preserveaspectratio="none">
                 <path d="M385 106.75C321 49.75 257 49.75 193 106.75C136.579 150.25 72.579 150.25 1.00001 106.75"
                     stroke="#808080" stroke-opacity="0.5" class="path_1" />
                 <path d="M385 99.75C321 42.75 257 42.75 193 99.75C136.579 143.25 72.5789 143.25 1 99.75"
@@ -93,11 +94,12 @@
                     <h2 class="text-center">DÉVELOPPEUR WEB JUNIOR</h2>
                     <img src="media/profil.png" alt="Photo de moi-même entourée d'un rond jaune avec une ombre portée"
                         class="profil lg:hidden">
-                    <img src="media/profil.png"
-                        alt="Photo de moi-même entourée d'un rond jaune avec une ombre portée" class="hidden lg:block ">
-                    <p class="hidden xl:flex w-1/4 pl-8 ml-24 text-xl text-right mt-auto flex-col"><span>Je suis pauvre et n’ai que mes rêves.
-                        Sous tes pas je les ai déroulés.
-                        Marche doucement car tu marches sur mes rêves.</span><span>Equilibrium</span></p>
+                    <img src="media/profil.png" alt="Photo de moi-même entourée d'un rond jaune avec une ombre portée"
+                        class="hidden lg:block ">
+                    <p class="hidden xl:flex w-1/4 pl-8 ml-24 text-xl text-right mt-auto flex-col"><span>Je suis pauvre
+                            et n’ai que mes rêves.
+                            Sous tes pas je les ai déroulés.
+                            Marche doucement car tu marches sur mes rêves.</span><span>Equilibrium</span></p>
                 </section>
 
 
@@ -115,16 +117,19 @@
     </div>
     <section class="flex flex-col items-center page_2 justify-between ">
         <h3 class="pb-2  lg:hidden">À propos de moi</h3>
-        <p class=" xl:w-3/4 lg:mt-2 ">Depuis toujours passionné par l’informatique et les nouvelles technologies, j’ai rejoint la
+        <p class=" xl:w-3/4 lg:mt-2 ">Depuis toujours passionné par l’informatique et les nouvelles technologies, j’ai
+            rejoint la
             formation
             de développeur web au sein de l’Access Code School en avril 2021.</p>
-        <p class=" xl:w-3/4">Ça a été pour moi une réelle révélation, le plaisir de transformer l’abstrait en concret, le
+        <p class=" xl:w-3/4">Ça a été pour moi une réelle révélation, le plaisir de transformer l’abstrait en concret,
+            le
             code en
             page web, m’a rappelé ma première passion, les mathématiques.</p>
         <p class=" xl:w-3/4">Je n’ai maintenant qu’une hâte, confirmer cette expérience dans le monde professionnel.</p>
-        <a href="media/chapuis_dylan_cv.pdf" target="_blank" rel="noopener noreferrer"><button class="flex flex-row justify-center">
-            <p class="p-2">Télécharger mon CV</p>
-        </button></a>
+        <a href="media/chapuis_dylan_cv.pdf" target="_blank" rel="noopener noreferrer"><button
+                class="flex flex-row justify-center">
+                <p class="p-2">Télécharger mon CV</p>
+            </button></a>
 
     </section>
 
@@ -151,7 +156,7 @@
                 développement web. Bien sûr l’HTML5 et le CSS3 mais aussi le Javascript, le SCSS, le SQL et le PHP.
             </p>
 
-            <p class="dev_p">Côté frameworks j’utilise Tailwind CSS, particle.js, fullpage.js et jQuery pour le moment.
+            <p class="dev_p">Côté frameworks j’utilise Tailwind CSS, particle.js, tsparticles et Vue.js pour le moment.
             </p>
 
             <p class="dev_p">Étant épistémophile, je compte bien continuer d’agrémenter ma librairie de connaissances !
@@ -223,23 +228,97 @@
 
     <section class="page_6 pb-4 ">
         <h3 class="lg:hidden">Contact</h3>
-       <form>
+        <form>
 
-            
+
 
             <!-- Formulaires -->
-            <input type="text" name="name" id="name" placeholder="Nom" pattern="[a-zA-Z]{2,}" required/>
+            <input type="text" name="name" id="name" placeholder="Nom" pattern="[a-zA-Z]{2,}" required />
+            <input type="text" name="firstname" id="firstname" placeholder="Prénom" pattern="[a-zA-Z]{2,}" required />
             <!-- Pattern pour name -->
             <input type="email" name="mail" id="email" placeholder="Email" required
                 pattern="[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})" />
             <!-- Pattern pour email -->
-            <input type="text" name="subject" id="subject" placeholder="Sujet" required/>
+            <input type="text" name="subject" id="subject" placeholder="Sujet" required />
             <textarea name="message" id="message" rows="8" placeholder="Message" required minlength="1"></textarea>
             <!-- Textarea pour la taille du bloc message -->
-            <button id="envoyer" type="submit" class="envoyer"><!-- Euh... c'est juste un bouton, nothing to see here -->Envoyer le mail &#x27A1;</button>
+            <button id="envoyer" type="submit" class="envoyer">
+                <!-- Euh... c'est juste un bouton, nothing to see here -->Envoyer le mail &#x27A1;</button>
+            <div class="doggo hidden">
+                <div class="husky">
+                    <div class="mane">
+                        <div class="coat"></div>
+                    </div>
+                    <div class="body">
+                        <div class="head">
+                            <div class="ear"></div>
+                            <div class="ear"></div>
+                            <div class="face">
+                                <div class="eye"></div>
+                                <div class="eye"></div>
+                                <div class="nose"></div>
+                                <div class="mouth">
+                                    <div class="lips"></div>
+                                    <div class="tongue"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="torso"></div>
+                    </div>
+                    <div class="legs">
+                        <div class="front-legs">
+                            <div class="leg"></div>
+                            <div class="leg"></div>
+                        </div>
+                        <div class="hind-leg">
+                        </div>
+                    </div>
+                    <div class="tail">
+                        <div class="tail">
+                            <div class="tail">
+                                <div class="tail">
+                                    <div class="tail">
+                                        <div class="tail">
+                                            <div class="tail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="media/signal.svg" alt="Panneau avec écrit : Contacter mon maître ici !" class="hidden panneau">
         </form>
-        
 
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position:absolute; display:none;">
+            <defs>
+
+
+                <filter id="squiggly-0">
+                    <feturbulence id="turbulence" basefrequency="0.02" numoctaves="3" result="noise" seed="0" />
+                    <fedisplacementmap id="displacement" in="SourceGraphic" in2="noise" scale="2" />
+                </filter>
+                <filter id="squiggly-1">
+                    <feturbulence id="turbulence" basefrequency="0.02" numoctaves="3" result="noise" seed="1" />
+                    <fedisplacementmap in="SourceGraphic" in2="noise" scale="3" />
+                </filter>
+
+                <filter id="squiggly-2">
+                    <feturbulence id="turbulence" basefrequency="0.02" numoctaves="3" result="noise" seed="2" />
+                    <fedisplacementmap in="SourceGraphic" in2="noise" scale="2" />
+                </filter>
+                <filter id="squiggly-3">
+                    <feturbulence id="turbulence" basefrequency="0.02" numoctaves="3" result="noise" seed="3" />
+                    <fedisplacementmap in="SourceGraphic" in2="noise" scale="3" />
+                </filter>
+
+                <filter id="squiggly-4">
+                    <feturbulence id="turbulence" basefrequency="0.02" numoctaves="3" result="noise" seed="4" />
+                    <fedisplacementmap in="SourceGraphic" in2="noise" scale="1" />
+                </filter>
+            </defs>
+        </svg>
     </section>
     <div class="modal" id="site1">
         <div>
