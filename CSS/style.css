@@ -576,15 +576,14 @@ body .surglass footer img {
   display: grid;
   -ms-grid-row-align: center;
       align-self: center;
-  height: 80%;
-  max-height: 80%;
+  height: 95%;
+  max-height: 95%;
   width: 100%;
   align-self: center;
   -ms-grid-rows: 1rem 1fr 1fr 1fr 1fr 2fr 1fr;
       grid-template-rows: 1rem 1fr 1fr 1fr 1fr 2fr 1fr;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  gap: 3%;
   font-family: marianne;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -600,17 +599,16 @@ body .surglass footer img {
 .page_6 form input {
   width: 75%;
   max-width: 700px;
-  height: 2.5rem;
-  font-size: 1rem;
-  padding: 1.5rem;
+  font-size: 0.8rem;
+  padding: 1.2rem;
   border-radius: 20px;
   -ms-grid-column-align: center;
       justify-self: center;
 }
 
 .page_6 form textarea {
-  font-size: 1rem;
-  padding: 1.5rem;
+  font-size: 0.8rem;
+  padding: 1.2rem;
   width: 75%;
   max-width: 700px;
   border-radius: 20px;
@@ -1049,6 +1047,7 @@ button:focus {
     background: -webkit-gradient(linear, left top, right top, from(#F5576C), to(#F093FB));
     background: linear-gradient(90deg, #F5576C 0%, #F093FB 100%);
     font-size: 72px;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

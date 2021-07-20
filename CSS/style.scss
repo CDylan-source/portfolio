@@ -570,13 +570,13 @@ body {
 .page_6 form {
     display: grid;
     align-self: center;
-    height: 80%;
-    max-height: 80%;
+    height: 95%;
+    max-height: 95%;
     width: 100%;
     align-self: center;
     grid-template-rows: 1rem 1fr 1fr 1fr 1fr 2fr 1fr;
     grid-template-columns: 1fr;
-    gap: 3%;
+    
     font-family: marianne;
     align-items: center;
     grid-template-areas:
@@ -607,17 +607,16 @@ body {
     input {
         width: 75%;
         max-width: 700px;
-        height: 2.5rem;
-        font-size: 1rem;
-        padding: 1.5rem;
+        font-size: 0.8rem;
+        padding: 1.2rem;
         border-radius: 20px;
         justify-self: center;
 
     }
 
     textarea {
-        font-size: 1rem;
-        padding: 1.5rem;
+        font-size: 0.8rem;
+        padding: 1.2rem;
         width: 75%;
         max-width: 700px;
         border-radius: 20px;
@@ -970,7 +969,7 @@ button:focus {
     .here {
         background: linear-gradient(90deg, #F5576C 0%, #F093FB 100%);
         font-size: 72px;
-
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
